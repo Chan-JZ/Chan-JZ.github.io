@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Mypost</title>
+      <title>C&#43;&#43; Pass By Reference</title>
       <link>https://Chan-JZ.github.io/posts/mypost/</link>
       <pubDate>Tue, 29 Nov 2022 01:41:59 +1030</pubDate>
       
       <guid>https://Chan-JZ.github.io/posts/mypost/</guid>
-      <description>This is a test
-public static void() { System.out.println(&amp;#34;This is another test&amp;#34;); } </description>
+      <description>int main() { } </description>
     </item>
     
   </channel>
