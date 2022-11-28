@@ -17,7 +17,9 @@
       <pubDate>Tue, 29 Nov 2022 01:41:59 +1030</pubDate>
       
       <guid>https://Chan-JZ.github.io/posts/mypost/</guid>
-      <description>int main() { } </description>
+      <description>In C++, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference.
+callee: A function that is called by another caller: A function that calls another function
+Pass by value This is the method that is most commonly used. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&amp;rsquo;s variable is passed into the callee function as an argument, where it will become a local variable.</description>
     </item>
     
   </channel>

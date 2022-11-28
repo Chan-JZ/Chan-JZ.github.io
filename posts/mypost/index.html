@@ -13,10 +13,14 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="C&#43;&#43; Pass By Reference"/>
-<meta name="twitter:description" content="int main() { } "/>
+<meta name="twitter:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference.
+callee: A function that is called by another caller: A function that calls another function
+Pass by value This is the method that is most commonly used. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable."/>
 
     <meta property="og:title" content="C&#43;&#43; Pass By Reference" />
-<meta property="og:description" content="int main() { } " />
+<meta property="og:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference.
+callee: A function that is called by another caller: A function that calls another function
+Pass by value This is the method that is most commonly used. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Chan-JZ.github.io/posts/mypost/" />
 <meta property="article:published_time" content="2022-11-29T01:41:59+10:30" />
@@ -56,9 +60,21 @@
       </div>
     </header>
     <div class="post-content">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-
+      <p>In C++, the arguments of a function can be passed by 3 methods: <strong>pass by value</strong>, <strong>pass by pointer</strong> and <strong>pass by reference</strong>.</p>
+<p><strong>callee</strong>: A function that is called by another
+<strong>caller</strong>: A function that calls another function</p>
+<h2 id="pass-by-value">Pass by value</h2>
+<p>This is the method that is most commonly used. When we call a function that takes in a single parameter with <em>pass by value</em>, a <em>copy</em> of the <strong>caller function&rsquo;s</strong> variable is passed into the <strong>callee function</strong> as an argument, where it will become a local variable. Note that this argument is just a copy <strong>callee function&rsquo;s</strong> variable and they are <em>two independent variables</em> with the same value. This means that whatever changes that are made to the argument is not reflected to the original variable of the <strong>caller function</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">int</span> a) {
+    a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 }
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+    cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will output 5
+</span><span style="color:#75715e"></span>    func(a);
+    cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will still output 5
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
     </div>
     <div class="post-footer">
