@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>C&#43;&#43; Pass By Referenceeeeee // JZ Chan&#39;s Blog</title>
+    <title>C&#43;&#43; Function Call (Pass by value, pass by reference, pass by pointer) // JZ Chan&#39;s Blog</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.68.3" />
@@ -12,15 +12,13 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C&#43;&#43; Pass By Referenceeeeee"/>
-<meta name="twitter:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference.
-callee: A function that is called by another caller: A function that calls another function
-Pass by value This is the method that is most commonly used. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable."/>
+<meta name="twitter:title" content="C&#43;&#43; Function Call (Pass by value, pass by reference, pass by pointer)"/>
+<meta name="twitter:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference. callee: A function that is called by another caller: A function that calls another function
+Pass by value This is the method is usually used when we want to perform some calculations in a function using the value of the parameters. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable."/>
 
-    <meta property="og:title" content="C&#43;&#43; Pass By Referenceeeeee" />
-<meta property="og:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference.
-callee: A function that is called by another caller: A function that calls another function
-Pass by value This is the method that is most commonly used. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable." />
+    <meta property="og:title" content="C&#43;&#43; Function Call (Pass by value, pass by reference, pass by pointer)" />
+<meta property="og:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference. callee: A function that is called by another caller: A function that calls another function
+Pass by value This is the method is usually used when we want to perform some calculations in a function using the value of the parameters. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Chan-JZ.github.io/posts/mypost/" />
 <meta property="article:published_time" content="2022-11-29T01:41:59+10:30" />
@@ -41,7 +39,7 @@ Pass by value This is the method that is most commonly used. When we call a func
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">C&#43;&#43; Pass By Referenceeeeee</h1>
+      <h1 class ="post-title">C&#43;&#43; Function Call (Pass by value, pass by reference, pass by pointer)</h1>
       <div class="post-meta">
         <div>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -55,16 +53,16 @@ Pass by value This is the method that is most commonly used. When we call a func
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          1 min read
+          4 min read
         </div>
       </div>
     </header>
     <div class="post-content">
-      <p>In C++, the arguments of a function can be passed by 3 methods: <strong>pass by value</strong>, <strong>pass by pointer</strong> and <strong>pass by reference</strong>.</p>
-<p><strong>callee</strong>: A function that is called by another
+      <p>In C++, the arguments of a function can be passed by 3 methods: <strong>pass by value</strong>, <strong>pass by pointer</strong> and <strong>pass by reference</strong>.
+<strong>callee</strong>: A function that is called by another
 <strong>caller</strong>: A function that calls another function</p>
 <h2 id="pass-by-value">Pass by value</h2>
-<p>This is the method that is most commonly used. When we call a function that takes in a single parameter with <em>pass by value</em>, a <em>copy</em> of the <strong>caller function&rsquo;s</strong> variable is passed into the <strong>callee function</strong> as an argument, where it will become a local variable. Note that this argument is just a copy <strong>callee function&rsquo;s</strong> variable and they are <em>two independent variables</em> with the same value. This means that whatever changes that are made to the argument is not reflected to the original variable of the <strong>caller function</strong>.</p>
+<p>This is the method is usually used when we want to perform some calculations in a function using the value of the parameters. When we call a function that takes in a single parameter with <em>pass by value</em>, a <em>copy</em> of the <strong>caller function&rsquo;s</strong> variable is passed into the <strong>callee function</strong> as an argument, where it will become a local variable. Note that this argument is just a copy <strong>callee function&rsquo;s</strong> variable and they are <em>two independent variables</em> with the same value. This means that whatever changes that are made to the argument is not reflected to the original variable of the <strong>caller function</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">int</span> a) {
     a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 }
@@ -75,7 +73,68 @@ Pass by value This is the method that is most commonly used. When we call a func
 </span><span style="color:#75715e"></span>    func(a);
     cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will still output 5
 </span><span style="color:#75715e"></span>}
-</code></pre></div>
+</code></pre></div><h2 id="pass-by-reference">Pass by reference</h2>
+<p>Pass by reference is used when we want to directly modify the value of the arguments in the <strong>callee function</strong>. As its name suggest, pass by reference means passing the reference of an argument into the <strong>callee function</strong> In this case, we pass the memory address of a variable into the <strong>callee function</strong> instead of passing the actual content to it. This means that both of the the variable of the <strong>caller function</strong> and the variable that is passed to the <strong>callee function</strong> point to the same memory address. Therefore, any changes made to the local variable in the <strong>callee function</strong> will reflect to the original variable of the <strong>caller function</strong>. An alternative for <em>pass by reference</em> is <em>pass by pointer</em>.</p>
+<h3 id="pass-by-pointer">Pass by pointer</h3>
+<p>Students who are learning C or C++ will probably find this more familiar. While this is a good practice for using pointers and has its own advantages, it is more complicated to write.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b) {
+    <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>a;
+    <span style="color:#f92672">*</span>a <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>b;
+    <span style="color:#f92672">*</span>b <span style="color:#f92672">=</span> temp;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will output 5, 10
+</span><span style="color:#75715e"></span>    swap(<span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">&amp;</span>b);
+    cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will output 10, 5
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h3 id="pass-by-reference-1">Pass by reference</h3>
+<p>As mentioned above, we can use <em>pass by reference</em> to do what we did using <em>pass by pointer</em>. In fact, the code will simpler as we don&rsquo;t need to explicitly pass in the reference of the variables and thus we don&rsquo;t have to dereference them in the <strong>caller function</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> a, <span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> b) {
+    <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> a;
+    a <span style="color:#f92672">=</span> b;
+    b <span style="color:#f92672">=</span> temp;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will output 5, 10
+</span><span style="color:#75715e"></span>    swap(a, b);
+    cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// Will output 10, 5
+</span><span style="color:#75715e"></span>}
+</code></pre></div><hr>
+<p>Both of the functions shown above will have the <strong>same functionality:</strong> they swap the value of the variables <strong>a</strong> and <strong>b</strong> of the caller function. It may appear that <em>pass by pointer</em> seems redundant and more difficult to code. However, it has its own advantages.</p>
+<h2 id="comparison-of-pass-by-reference-and-pass-by-pointer">Comparison of Pass by reference and Pass by pointer</h2>
+<table>
+<thead>
+<tr>
+<th>Pass by pointer</th>
+<th>Pass by reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creates a pointer that points to the memory address of the variable</td>
+<td>Creats an alias (another name) for the variable</td>
+</tr>
+<tr>
+<td>Need to dereference using * to get the value of the variable</td>
+<td>Can directly access and change the value of the variable</td>
+</tr>
+<tr>
+<td>Can point to NULL</td>
+<td>Has to point to a variable</td>
+</tr>
+<tr>
+<td>Can be reassigned to the memory address of another variable</td>
+<td>Can&rsquo;t be reassigned to any other memory address</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>As we can see, there are some subtle differences between <em>pass by pointer</em> and <em>pass by reference</em>. If we just want a function to change the content of a variable we pass in, <em>pass by reference</em> is easier to write. However, if we want to reasign a pointer that is passed into a function,</p>
+
     </div>
     <div class="post-footer">
       
