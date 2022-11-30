@@ -124,7 +124,7 @@ Pass by value This is the method is usually used when we want to perform some ca
 </tr>
 <tr>
 <td>Can point to NULL</td>
-<td>Has to point to a variable</td>
+<td>Must be initialized during declaration</td>
 </tr>
 <tr>
 <td>Can be reassigned to the memory address of another variable</td>
@@ -132,8 +132,22 @@ Pass by value This is the method is usually used when we want to perform some ca
 </tr>
 </tbody>
 </table>
-<h2 id="summary">Summary</h2>
-<p>As we can see, there are some subtle differences between <em>pass by pointer</em> and <em>pass by reference</em>. If we just want a function to change the content of a variable we pass in, <em>pass by reference</em> is easier to write. However, if we want to reasign a pointer that is passed into a function,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
+
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> x <span style="color:#f92672">=</span> a; <span style="color:#75715e">// Must be initialized during declaration
+</span><span style="color:#75715e"></span>    x <span style="color:#f92672">=</span> b; <span style="color:#75715e">// x becomes 15
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> b; <span style="color:#75715e">// Can&#39;t reassign x to another location
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> NULL; <span style="color:#75715e">// Can&#39;t reassign x to NULL
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> y; <span style="color:#75715e">// Can declare without initialization
+</span><span style="color:#75715e"></span>    y <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a; <span style="color:#75715e">// Can initialize after declaration
+</span><span style="color:#75715e"></span>    y <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>b; <span style="color:#75715e">// Can reassign to another location
+</span><span style="color:#75715e"></span>    y <span style="color:#f92672">=</span> NULL; <span style="color:#75715e">// Can point to NULL
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="summary">Summary</h2>
+<p>As we can see, there are some subtle differences between <em>pass by pointer</em> and <em>pass by reference</em>. If we just want a function to change the content of a variable we pass in, <em>pass by reference</em> is easier to write. However, we should also use pointers when we want to enjoy the extra benefits of using a pointer (reassigning).</p>
 
     </div>
     <div class="post-footer">
