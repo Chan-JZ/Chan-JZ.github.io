@@ -13,11 +13,15 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="C&#43;&#43; Function Call (Pass by value, Pass by reference, Pass by pointer)"/>
-<meta name="twitter:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference. callee: A function that is called by another caller: A function that calls another function
+<meta name="twitter:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference
+callee: A function that is called by another
+caller: A function that calls another function
  Pass by value This is the method is usually used when we want to perform some calculations in a function using the value of the parameters. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable."/>
 
     <meta property="og:title" content="C&#43;&#43; Function Call (Pass by value, Pass by reference, Pass by pointer)" />
-<meta property="og:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference. callee: A function that is called by another caller: A function that calls another function
+<meta property="og:description" content="In C&#43;&#43;, the arguments of a function can be passed by 3 methods: pass by value, pass by pointer and pass by reference
+callee: A function that is called by another
+caller: A function that calls another function
  Pass by value This is the method is usually used when we want to perform some calculations in a function using the value of the parameters. When we call a function that takes in a single parameter with pass by value, a copy of the caller function&rsquo;s variable is passed into the callee function as an argument, where it will become a local variable." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Chan-JZ.github.io/posts/mypost/" />
@@ -58,8 +62,8 @@
       </div>
     </header>
     <div class="post-content">
-      <p>In C++, the arguments of a function can be passed by 3 methods: <strong>pass by value</strong>, <strong>pass by pointer</strong> and <strong>pass by reference</strong>.
-<strong>callee</strong>: A function that is called by another
+      <p>In C++, the arguments of a function can be passed by 3 methods: <strong>pass by value</strong>, <strong>pass by pointer</strong> and <strong>pass by reference</strong><br>
+<strong>callee</strong>: A function that is called by another<br>
 <strong>caller</strong>: A function that calls another function</p>
 <p> 
  </p>
@@ -98,7 +102,7 @@
 </code></pre></div><p> 
  </p>
 <h3 id="pass-by-reference-1">Pass by reference</h3>
-<p>As mentioned above, we can use <em>pass by reference</em> to do what we did using <em>pass by pointer</em>. In fact, the code will simpler as we don&rsquo;t need to explicitly pass in the reference of the variables and thus we don&rsquo;t have to dereference them in the <strong>caller function</strong>.</p>
+<p>As mentioned above, we can use <em>pass by reference</em> to do what we did using <em>pass by pointer</em>. In fact, the code will be simpler as we don&rsquo;t need to explicitly pass in the reference of the variables and thus we don&rsquo;t have to dereference them in the <strong>caller function</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> a, <span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> b) {
     <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> a;
     a <span style="color:#f92672">=</span> b;
@@ -149,8 +153,8 @@
 
     <span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> x <span style="color:#f92672">=</span> a; <span style="color:#75715e">// Must be initialized during declaration
 </span><span style="color:#75715e"></span>    x <span style="color:#f92672">=</span> b; <span style="color:#75715e">// x becomes 15
-</span><span style="color:#75715e"></span>    <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> b; <span style="color:#75715e">// Can&#39;t reassign x to another location
-</span><span style="color:#75715e"></span>    <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> NULL; <span style="color:#75715e">// Can&#39;t reassign x to NULL
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> b; <span style="color:#75715e">// Error: Can&#39;t reassign x to another location
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> NULL; <span style="color:#75715e">// Error: Can&#39;t reassign x to NULL
 </span><span style="color:#75715e"></span>
     <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> y; <span style="color:#75715e">// Can declare without initialization
 </span><span style="color:#75715e"></span>    y <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a; <span style="color:#75715e">// Can initialize after declaration
