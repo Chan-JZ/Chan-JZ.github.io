@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JZ Chan&#39;s Blog</title>
+    <title>My Blog</title>
     <link>https://Chan-JZ.github.io/</link>
-    <description>Recent content on JZ Chan&#39;s Blog</description>
+    <description>Recent content on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Nov 2022 01:41:59 +1030</lastBuildDate>
+    <lastBuildDate>Thu, 08 Dec 2022 00:46:06 +1030</lastBuildDate>
     
 	<atom:link href="https://Chan-JZ.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43; std::string class</title>
+      <link>https://Chan-JZ.github.io/posts/cpp_string/</link>
+      <pubDate>Sun, 11 Dec 2022 14:35:32 +1030</pubDate>
+      
+      <guid>https://Chan-JZ.github.io/posts/cpp_string/</guid>
+      <description>In C++, we use the class std::string to store a sequence of characters, where we can perform various member functions and operators on the characters.
+To use the std::string class mentioned above, simply include its header at the top of your .cpp file. Note that the third line allows us to use identifiers in the std namespace without using the prefix std::
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std; Normally, we would initialize a stirng variable in the following way:</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://Chan-JZ.github.io/about/</link>
+      <pubDate>Thu, 08 Dec 2022 00:46:06 +1030</pubDate>
+      
+      <guid>https://Chan-JZ.github.io/about/</guid>
+      <description>This is a test </description>
+    </item>
     
     <item>
       <title>C&#43;&#43; Function Call (Pass by value, Pass by reference, Pass by pointer)</title>

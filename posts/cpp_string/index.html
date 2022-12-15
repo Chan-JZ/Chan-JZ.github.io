@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>C&#43;&#43; std::string class // My Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.9e9c6027c30f5aa9423b581bd9cddd1ddc66088adb9c2604f89eb5828efea5a1.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43; std::string class"/>
+<meta name="twitter:description" content="In C&#43;&#43;, we use the class std::string to store a sequence of characters, where we can perform various member functions and operators on the characters.
+To use the std::string class mentioned above, simply include its header at the top of your .cpp file. Note that the third line allows us to use identifiers in the std namespace without using the prefix std::
+#include &lt;iostream&gt;#include &lt;string&gt;using namespace std; Normally, we would initialize a stirng variable in the following way:"/>
+
+    <meta property="og:title" content="C&#43;&#43; std::string class" />
+<meta property="og:description" content="In C&#43;&#43;, we use the class std::string to store a sequence of characters, where we can perform various member functions and operators on the characters.
+To use the std::string class mentioned above, simply include its header at the top of your .cpp file. Note that the third line allows us to use identifiers in the std namespace without using the prefix std::
+#include &lt;iostream&gt;#include &lt;string&gt;using namespace std; Normally, we would initialize a stirng variable in the following way:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Chan-JZ.github.io/posts/cpp_string/" />
+<meta property="article:published_time" content="2022-12-11T14:35:32+10:30" />
+<meta property="article:modified_time" content="2022-12-11T14:35:32+10:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Chan-JZ.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">My Blog</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">C&#43;&#43; std::string class</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 11, 2022
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>In C++, we use the class <em>std::string</em> to store a <strong>sequence of characters</strong>, where we can perform various member functions and operators on the characters.</p>
+<p>To use the std::string class mentioned above, simply include its header at the top of your .cpp file. Note that the third line allows us to use identifiers in the <em>std</em> namespace without using the prefix <span style="background-color: rgb(40, 40, 40);"><code>std::</code></span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</code></pre></div><p>Normally, we would initialize a stirng variable in the following way:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcd&#34;</span>;
+    string s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;efgh&#34;</span>;
+}
+</code></pre></div><p>However, we could take advantage of the constructor of the string class for more flexibility.</p>
+<p> </p>
+<h2 id="constructor">Constructor</h2>
+<h3 id="string">string()</h3>
+<p>This is the default constructor, which will construct an empty string of zero length. There are 2 ways to do this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 <span style="color:#f92672">=</span> string(); 
+    string s2;   
+
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s2: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: 
+s2: 
+</code></pre></div><p> </p>
+<h3 id="stringconst-string-str">string(const string&amp; str)</h3>
+<p>This is the copy constructor, which will construct a copy of <strong>str</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>; 
+    string s2 (s1);   
+
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s2: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: Hello
+s2: Hello
+</code></pre></div><p> </p>
+<h3 id="stringconst-string-str-size_t-pos-size_t-len--npos">string(const string&amp; str, size_t pos, size_t len = npos)</h3>
+<p>This is the copy constructor, which will construct a copy the portion of str that begins at the character position <strong>pos</strong> and spans <strong>len</strong> characters. If no <strong>len</strong> is provided, the substr starting from <strong>pos</strong> til the <strong>end</strong> of the string will be copied.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>; 
+    string s2 (s1, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);   
+    string s3 (s1, <span style="color:#ae81ff">1</span>);
+
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s2: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s3: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s3 <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: Hello
+s2: He
+s3: ello
+</code></pre></div><p> </p>
+<h3 id="stringsize_t-n-char-c">string(size_t n, char c)</h3>
+<p>This is the fill constructor, which will fill the string with <strong>n</strong> copies of <strong>c</strong>. You can provide an alphabetical character or the ASCII code of a character.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;A&#39;</span>);   
+    string s2 (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">122</span>); 
+
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s2: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: AAAAA
+s2: zzzzz
+</code></pre></div><p> </p>
+<h3 id="stringiterator-first-iterator-last">string(iterator first, iterator last)</h3>
+<p>This is the range constructor, which will copy the sequence of character sin the range <strong>[first, last)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World&#34;</span>;
+    string s2 (s1.begin(), s1.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">8</span>); 
+    string s2 (s1.rbegin(), s1.rend()); 
+
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s2: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s3: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s3 <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: Hello, World
+s2: Hello, W
+s3: dlroW ,olleH
+</code></pre></div><p> 
+ </p>
+<h2 id="iterator-functions">Iterator Functions</h2>
+<h3 id="begin">begin()</h3>
+<p>Returns an iterator pointing to the first character of the string.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>s1.begin(); it<span style="color:#f92672">!=</span>s1.end(); <span style="color:#f92672">++</span>it) {
+        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>it;
+    }
+    cout <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: Hello
+</code></pre></div><h3 id="end">end()</h3>
+<p>Returns an iterator pointing to the <strong>past-the-end</strong> character of the string.</p>
+<h3 id="rbegin">rbegin()</h3>
+<ol>
+<li>Returns a reverse iterator pointing to the last character of the string.</li>
+<li>Reverse iterators iterate backwards: incrementing them moves them towards begin().</li>
+<li>rbegin points to the character right before end().</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>s1.rbegin(); it<span style="color:#f92672">!=</span>s1.rend(); <span style="color:#f92672">++</span>it) {
+        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>it;
+    }
+    cout <span style="color:#f92672">&lt;&lt;</span> endl;
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: olleH
+</code></pre></div><h3 id="rend">rend()</h3>
+<p>Returns a reverse iterator pointing to the <strong>theoretical element</strong> preceding the first character of the string.</p>
+<p> 
+ </p>
+<h2 id="other-commonly-used-functions">Other commonly used functions</h2>
+<h3 id="size-length">size(), length()</h3>
+<p>Both functions are identical and return the <strong>length</strong> of the string.</p>
+<h3 id="clear">clear()</h3>
+<p>Delete the contents of the string, turning it into an <strong>empty string</strong>.</p>
+<h3 id="empty">empty()</h3>
+<p>Returns whether the string <strong>is empty</strong>.
+Return Value</p>
+<ol>
+<li>true if string length is 0</li>
+<li>false otherwise</li>
+</ol>
+<h3 id="reference">Reference</h3>
+<ol>
+<li>
+<p>cplusplus 2022, <em>std::string::string</em>, cplusplus, viewed 11 December 2022,</p>
+<p><a href="https://cplusplus.com/reference/string/string/string/">https://cplusplus.com/reference/string/string/string/</a></p>
+</li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
