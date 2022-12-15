@@ -18,8 +18,8 @@
       
       <guid>https://Chan-JZ.github.io/posts/cpp_string/</guid>
       <description>In C++, we use the class std::string to store a sequence of characters, where we can perform various member functions and operators on the characters.
-To use the std::string class mentioned above, simply include its header at the top of your .cpp file. Note that the third line allows us to use identifiers in the std namespace without using the prefix std::
-#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std; Normally, we would initialize a stirng variable in the following way:</description>
+To use the std::string class mentioned above, simply include its header at the top of your .cpp file. (Note that the third line allows us to use identifiers in the std namespace without using the prefix std::)
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std; Normally, we would initialize a string variable in the following way:</description>
     </item>
     
     <item>
