@@ -58,7 +58,7 @@ To use the std::string class mentioned above, simply include its header at the t
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          6 min read
+          7 min read
         </div>
       </div>
     </header>
@@ -136,7 +136,8 @@ Output</p>
 s2: zzzzz
 </code></pre></div><p> </p>
 <h3 id="stringiterator-first-iterator-last">string(iterator first, iterator last)</h3>
-<p>This is the range constructor, which will copy the sequence of character sin the range <strong>[first, last)</strong></p>
+<p>This is the range constructor, which will copy the sequence of characters in the range <strong>[first, last)</strong><br>
+<img src="/cpp_string/img1.png" alt="s"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
     string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World&#34;</span>;
     string s2 (s1.begin(), s1.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">8</span>); 
@@ -155,8 +156,8 @@ s3: dlroW ,olleH
  </p>
 <h2 id="iterator-functions">Iterator Functions</h2>
 <h3 id="begin-end">begin(), end()</h3>
-<p>begin(): Returns an iterator pointing to the first character of the string.  
-Returns an iterator pointing to the <strong>past-the-end</strong> character of the string.</p>
+<p>begin(): Returns an iterator pointing to the first character of the string.  <br>
+end(): Returns an iterator pointing to the <strong>past-the-end</strong> character of the string.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
     string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>s1.begin(); it<span style="color:#f92672">!=</span>s1.end(); <span style="color:#f92672">++</span>it) {
@@ -201,8 +202,8 @@ Output</p>
 
 </code></pre></div><p> 
 Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">.length()<span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
-.size()<span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1.length()<span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
+s1.size()<span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
 </code></pre></div><p> </p>
 <h3 id="clear">clear()</h3>
 <p>Delete the contents of the string, turning it into an <strong>empty string</strong>.</p>
@@ -288,28 +289,36 @@ Output</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: Hello, World..... ello
 </code></pre></div><p> </p>
 <h3 id="insert">insert()</h3>
-<p>The insert() function has the same functionality as the append() function but we can choose insert to anywhere in the string.</p>
+<p>The insert() function has the same functionality as the append() function but we can choose insert to anywhere in the string. There are 2 different ways we can do this. Say we are trying to insert <strong>str</strong> to a string <em>s</em>.</p>
+<ol>
+<li>s.insert(<strong>startingPosition</strong>, <strong>str</strong>, <strong>startingPosOfStr</strong>, <strong>lengthOfSubstr</strong>). <strong>startingPosition</strong> indicates the insertion point of the new contents to <strong>s</strong>, which will be inserted before the character at <strong>startingPosition</strong>. <strong>startingPosOfStr</strong> indicates the position of the first character in <strong>str</strong> to be inserted to <strong>s</strong>. <strong>lengthOfSubstr</strong> indicates the length of the substring to be inserted to <strong>s</strong>, starting from index <strong>startingPosOfStr</strong>. If the last 2 parameters are no provided, the entire <strong>str</strong> will be inserted to <strong>startingPosition</strong>;.</li>
+<li>s.insert(<strong>startingPosition</strong>, <strong>beginningIterator</strong>, <strong>endIterator</strong>). This will insert the  if <strong>str</strong> in the range <strong>[beginningIterator, endIterator)</strong></li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abef&#34;</span>;
     string s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cd&#34;</span>;
     string s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zghijz&#34;</span>;
 
     cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
-    s1.insert(<span style="color:#ae81ff">2</span>, s2);
-    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
-    s1.insert(<span style="color:#ae81ff">5</span>, s3, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>); <span style="color:#75715e">// 1 = starting position of s3 to insert, 4 = length of string to insert
+    s1.insert(<span style="color:#ae81ff">2</span>, s2); <span style="color:#75715e">// 2 = we insert s2 at index 2 of s1
 </span><span style="color:#75715e"></span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
-    s1.insert(s1.end(), <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;z&#39;</span>);
-    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    s1.insert(<span style="color:#ae81ff">5</span>, s3, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>); <span style="color:#75715e">// The substr that we are inserting will start from index 1 and has length 4
+</span><span style="color:#75715e"></span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
+    s1.insert(s1.end(), s3.begin(), s3.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">// .end() = we insert at the end of s1
+</span><span style="color:#75715e"></span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
 
 </code></pre></div><p> 
 Output</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">s1: abef
 s1: abcdef
 s1: abcdeghijf
-s1: abcdeghijfzzzzzzzzzz
+s1: abcdeghijfz
 </code></pre></div><p> </p>
 <h3 id="erase">erase()</h3>
-<p>Erase a part of the string or even the entire string.</p>
+<p>Erase a part of the string or even the entire string. Similar to insert(), there are 2 ways we can do this. Say we are trying to delete from the string <strong>s</strong>:</p>
+<ol>
+<li>s.erase(<strong>startingPos = 0</strong>, <strong>length</strong>). This will erase the portion of the string starting at <strong>startingPos</strong> and spans <strong>length</strong>.</li>
+<li>s.erase(<strong>beginningIterator</strong>, <strong>endIterator</strong>). This will erase the portion of the string in the range <strong>[beginningIterator, endIterator)</strong></li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World&#34;</span>;
 
     cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> endl;
