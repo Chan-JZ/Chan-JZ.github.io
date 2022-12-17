@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Hyperstyle Installation</title>
+      <link>https://Chan-JZ.github.io/posts/hyperstyleinstallation/</link>
+      <pubDate>Sat, 17 Dec 2022 17:24:51 +1030</pubDate>
+      
+      <guid>https://Chan-JZ.github.io/posts/hyperstyleinstallation/</guid>
+      <description>Installing Hyperstyle using Docker Hyperstyle is a convenient tool that is built on top of various existing linters (Pylint, PMD, etc). All of these linters are integrated and configured by Hyperstyle.
+Authors: Jian Zhe Chan and Jiajun (Jason) Yu
+Functionality  Runs linters for various programming languages including Python, Java, etc and parse their output. Print linter outputs to the terminal in the JSON format for easy data manipulation. Calculates the code quality value (EXCELLENT, GOOD, MODERATE, BAD) based on the linters&amp;rsquo; output.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; std::string class</title>
       <link>https://Chan-JZ.github.io/posts/cpp_string/</link>
       <pubDate>Sun, 11 Dec 2022 14:35:32 +1030</pubDate>

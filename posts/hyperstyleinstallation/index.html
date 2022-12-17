@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hyperstyle Installation // My Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.9e9c6027c30f5aa9423b581bd9cddd1ddc66088adb9c2604f89eb5828efea5a1.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hyperstyle Installation"/>
+<meta name="twitter:description" content="Installing Hyperstyle using Docker Hyperstyle is a convenient tool that is built on top of various existing linters (Pylint, PMD, etc). All of these linters are integrated and configured by Hyperstyle.
+Authors: Jian Zhe Chan and Jiajun (Jason) Yu
+Functionality  Runs linters for various programming languages including Python, Java, etc and parse their output. Print linter outputs to the terminal in the JSON format for easy data manipulation. Calculates the code quality value (EXCELLENT, GOOD, MODERATE, BAD) based on the linters&rsquo; output."/>
+
+    <meta property="og:title" content="Hyperstyle Installation" />
+<meta property="og:description" content="Installing Hyperstyle using Docker Hyperstyle is a convenient tool that is built on top of various existing linters (Pylint, PMD, etc). All of these linters are integrated and configured by Hyperstyle.
+Authors: Jian Zhe Chan and Jiajun (Jason) Yu
+Functionality  Runs linters for various programming languages including Python, Java, etc and parse their output. Print linter outputs to the terminal in the JSON format for easy data manipulation. Calculates the code quality value (EXCELLENT, GOOD, MODERATE, BAD) based on the linters&rsquo; output." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Chan-JZ.github.io/posts/hyperstyleinstallation/" />
+<meta property="article:published_time" content="2022-12-17T17:24:51+10:30" />
+<meta property="article:modified_time" content="2022-12-17T17:24:51+10:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Chan-JZ.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">My Blog</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hyperstyle Installation</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 17, 2022
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="installing-hyperstyle-using-docker">Installing Hyperstyle using Docker</h1>
+<p>Hyperstyle is a convenient tool that is built on top of various existing linters (Pylint, PMD, etc). All of these linters are integrated and configured by Hyperstyle.</p>
+<!-- more -->
+<p>Authors: Jian Zhe Chan and Jiajun (Jason) Yu</p>
+<h4 id="functionality">Functionality</h4>
+<ol>
+<li>Runs linters for various programming languages including Python, Java, etc and parse their output.</li>
+<li>Print linter outputs to the terminal in the JSON format for easy data manipulation.</li>
+<li>Calculates the <strong>code quality</strong> value (<strong>EXCELLENT</strong>, <strong>GOOD</strong>, <strong>MODERATE</strong>, <strong>BAD</strong>) based on the linters&rsquo; output.</li>
+</ol>
+<p> </p>
+<h4 id="installation-via-docker">Installation via Docker</h4>
+<p>The first method is complicated and tedious. It requires us to create a set of environmental variable and run many commands. Today, we are going to talk about the alternative method, installing via <strong>Docker</strong>. Basically, we will build a docker image from the Hyperstyle Dockerfile and run the tool inside this image.</p>
+<p> </p>
+<h4 id="step-1-clone-the-hyperstyle-github-repository">Step 1: Clone the Hyperstyle GitHub Repository</h4>
+<p>Go to the <a href="https://github.com/hyperskill/hyperstyle">Hyperstyle GitHub Repository</a> and clone it to a desired directory.<br>
+Example:<br>
+<img src="/HyperstyleInstallation/img8.png" alt="s"></p>
+<p>This will result in a folder &lsquo;hyperstyle&rsquo; being created in my Desktop directory</p>
+<p> </p>
+<h4 id="step-2-build-a-docker-image-using-hyperstyles-dockerfile">Step 2: Build a Docker image using hyperstyle&rsquo;s Dockerfile</h4>
+<p>For the following steps, we will be using the VSCode Docker Extension as it is more convenient. First, install the extension on VSCode.
+Next, open the hyperstyle folder on VSCode, right click on the Dockerfile file and click &ldquo;Build Image&rdquo;. This will build an image called &lsquo;hyperstyle&rsquo; using the Dockerfile file.</p>
+<p><img src="/HyperstyleInstallation/img2.png" alt="s"></p>
+<p> </p>
+<h4 id="step-3-run-the-docker-image">Step 3: Run the Docker image</h4>
+<p>After installing the extension, we should be able to see Docker&rsquo;s icon on the left sidebar. If it doesn&rsquo;t appear on the left sidebar, right click on it and make sure &lsquo;Docker&rsquo; is checked.<br>
+<img src="/HyperstyleInstallation/img3.png" alt="s"></p>
+<p> </p>
+<p>Now we will run the hyperstyle image. Right click on latest and click &lsquo;Run Interactive&rsquo;<br>
+<img src="/HyperstyleInstallation/img4.png" alt="s"></p>
+<p> </p>
+<h4 id="done">Done!</h4>
+<p>At this point we have successfully built the Hyperstyle container and can now use Hyperstyle in the interactive terminal.<br>
+<img src="/HyperstyleInstallation/img6.png" alt="s"> <br>
+<img src="/HyperstyleInstallation/img5.png" alt="s"></p>
+<p> </p>
+<h4 id="running-hyperstyle">Running Hyperstyle</h4>
+<p>Now let&rsquo;s try runnign Hyperstyle. Note that we will be in the container environment, so we need to move the files that we want to analyze into the environment. To do so, we can use the <strong>docker cp</strong> command. But first, we need to get the <em>id</em> of the container. To do so, run the following command in your <strong>host&rsquo;s terminal</strong>.</p>
+<p><img src="/HyperstyleInstallation/img7.png" alt="s"></p>
+<p>Once we got the container&rsquo;s id, we can start moving files into the container from the host. To do so, we use the <strong>docker cp</strong> command:</p>
+<p><img src="/HyperstyleInstallation/img9.png" alt="s"></p>
+<p>This will copy the file <strong>a.py</strong> which is in my <em>Desktop directory</em> to the <em>root directory</em> of the container&rsquo;s environment. However, we want the file to be in the specific directory: <strong>/review/hyperstyle/src/python/review</strong>. To do so, we need to modify our command above slightly:</p>
+<p><img src="/HyperstyleInstallation/img13.png" alt="s"></p>
+<p>Now we can see that a.py is in the right directory:</p>
+<p><img src="/HyperstyleInstallation/img14.png" alt="s"></p>
+<p>We can now analyze <strong>a.py</strong> in the container&rsquo;s environment. However, we need to be in the specific directory mentioned above first. Since the container&rsquo;s environment is the same across all computers, we can just copy the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">cd review<span style="color:#f92672">/</span>hyperstyle<span style="color:#f92672">/</span>src<span style="color:#f92672">/</span>python<span style="color:#f92672">/</span>review
+</code></pre></div><p>To run Hyperstyle, we can use the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">python run_tool.py a.py
+</code></pre></div><p>The output will then be printed on the terminal</p>
+<p><img src="/HyperstyleInstallation/img15.png" alt="s"></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
