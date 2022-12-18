@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>C&#43;&#43; Constructor Member Initializer List // My Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.9e9c6027c30f5aa9423b581bd9cddd1ddc66088adb9c2604f89eb5828efea5a1.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43; Constructor Member Initializer List"/>
+<meta name="twitter:description" content="Constructor Member Initializer List allows us to initialize a class&rsquo; data members in the constructor. There 2 main ways for us to initialize data members in a constructor.
+ Traditional way class Person { public: string pName; int age; Person() { pName = &#34;Alice&#34;; age = 0; } Person(string name) { pName = name; age = 0; } Person(string name, int val) { pName = name; age = val; } }; int main() { Person *s1 = new Person(); cout &lt;&lt; &#34;pName: &#34; &lt;&lt; s1-&gt;pName &lt;&lt; &#34;, age: &#34; &lt;&lt; s1-&gt;age &lt;&lt; endl; Person *s2 = new Person(&#34;Bob&#34;); cout &lt;&lt; &#34;pName: &#34; &lt;&lt; s2-&gt;pName &lt;&lt; &#34;, age: &#34; &lt;&lt; s2-&gt;age &lt;&lt; endl; Person *s3 = new Person(&#34;Charlie&#34;, 10); cout &lt;&lt; &#34;pName: &#34; &lt;&lt; s3-&gt;pName &lt;&lt; &#34;, age: &#34; &lt;&lt; s3-&gt;age &lt;&lt; endl; }  Output:"/>
+
+    <meta property="og:title" content="C&#43;&#43; Constructor Member Initializer List" />
+<meta property="og:description" content="Constructor Member Initializer List allows us to initialize a class&rsquo; data members in the constructor. There 2 main ways for us to initialize data members in a constructor.
+ Traditional way class Person { public: string pName; int age; Person() { pName = &#34;Alice&#34;; age = 0; } Person(string name) { pName = name; age = 0; } Person(string name, int val) { pName = name; age = val; } }; int main() { Person *s1 = new Person(); cout &lt;&lt; &#34;pName: &#34; &lt;&lt; s1-&gt;pName &lt;&lt; &#34;, age: &#34; &lt;&lt; s1-&gt;age &lt;&lt; endl; Person *s2 = new Person(&#34;Bob&#34;); cout &lt;&lt; &#34;pName: &#34; &lt;&lt; s2-&gt;pName &lt;&lt; &#34;, age: &#34; &lt;&lt; s2-&gt;age &lt;&lt; endl; Person *s3 = new Person(&#34;Charlie&#34;, 10); cout &lt;&lt; &#34;pName: &#34; &lt;&lt; s3-&gt;pName &lt;&lt; &#34;, age: &#34; &lt;&lt; s3-&gt;age &lt;&lt; endl; }  Output:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Chan-JZ.github.io/posts/constructorsinitializerlists/" />
+<meta property="article:published_time" content="2022-12-18T02:44:34+10:30" />
+<meta property="article:modified_time" content="2022-12-18T02:44:34+10:30" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Chan-JZ.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">My Blog</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">C&#43;&#43; Constructor Member Initializer List</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 18, 2022
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Constructor Member Initializer List allows us to initialize a class&rsquo; data members in the constructor. There 2 main ways for us to initialize data members in a constructor.</p>
+<p> </p>
+<h4 id="traditional-way">Traditional way</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+{
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    string pName;
+    <span style="color:#66d9ef">int</span> age;
+    Person() {
+        pName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alice&#34;</span>;
+        age <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    }
+
+    Person(string name) {
+        pName <span style="color:#f92672">=</span> name;
+        age <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    }
+
+    Person(string name, <span style="color:#66d9ef">int</span> val) {
+        pName <span style="color:#f92672">=</span> name;
+        age <span style="color:#f92672">=</span> val;
+    }
+};
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    Person <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person();
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;pName: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1<span style="color:#f92672">-&gt;</span>pName <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, age: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1<span style="color:#f92672">-&gt;</span>age <span style="color:#f92672">&lt;&lt;</span> endl;
+    Person <span style="color:#f92672">*</span>s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person(<span style="color:#e6db74">&#34;Bob&#34;</span>);
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;pName: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2<span style="color:#f92672">-&gt;</span>pName <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, age: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s2<span style="color:#f92672">-&gt;</span>age <span style="color:#f92672">&lt;&lt;</span> endl;
+    Person <span style="color:#f92672">*</span>s3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person(<span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#ae81ff">10</span>);
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;pName: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s3<span style="color:#f92672">-&gt;</span>pName <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, age: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s3<span style="color:#f92672">-&gt;</span>age <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div><p> </p>
+<p>Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">p1: Alice, age: <span style="color:#ae81ff">0</span>
+p2: Bob, age: <span style="color:#ae81ff">0</span>
+p3: Charlie, age: <span style="color:#ae81ff">10</span>
+</code></pre></div><p>In CPP, there is an alternative way to do this: member initialization list.</p>
+<p> </p>
+<h4 id="member-initialization-list">Member Initialization List</h4>
+<p>This can be think of as a shorthand of the traditional way to initialize. It makes our code look cleaner especially when we have a lot of data members.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+{
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    string pName;
+    <span style="color:#66d9ef">int</span> age;
+    Person() <span style="color:#f92672">:</span> pName(<span style="color:#e6db74">&#34;Alice&#34;</span>), age(<span style="color:#ae81ff">0</span>) {}
+    Person(string name) <span style="color:#f92672">:</span> pName(name), age(<span style="color:#ae81ff">0</span>) {}
+    Person(string name, <span style="color:#66d9ef">int</span> val) <span style="color:#f92672">:</span> pName(name), age(val) {}
+};
+</code></pre></div><p> 
+Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">p1: Alice, age: <span style="color:#ae81ff">0</span>
+p2: Bob, age: <span style="color:#ae81ff">0</span>
+p3: Charlie, age: <span style="color:#ae81ff">10</span>
+</code></pre></div><p>As we can see from above, we can achieve the same result as using the traditional way but the code is short and concise while the readability is kept. We can also choose to use default arguments to further shorten the code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+{
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    string pName;
+    <span style="color:#66d9ef">int</span> age;
+    Person(string name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#66d9ef">int</span> val <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">:</span> pName(name), age(val) {}
+};
+</code></pre></div><p> </p>
+<h4 id="examples">Examples</h4>
+<p>Since Class and Structs in CPP are very similar to each other, Structs can also take advantage of this feature. Below is an example of constructor initializer list from <strong>Leetcode</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// Definition for singly-linked list.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ListNode</span> {
+    <span style="color:#66d9ef">int</span> val;
+    ListNode <span style="color:#f92672">*</span>next;
+    ListNode() <span style="color:#f92672">:</span> val(<span style="color:#ae81ff">0</span>), next(<span style="color:#66d9ef">nullptr</span>) {}
+    ListNode(<span style="color:#66d9ef">int</span> x) <span style="color:#f92672">:</span> val(x), next(<span style="color:#66d9ef">nullptr</span>) {}
+    ListNode(<span style="color:#66d9ef">int</span> x, ListNode <span style="color:#f92672">*</span>next) <span style="color:#f92672">:</span> val(x), next(next) {}
+};
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

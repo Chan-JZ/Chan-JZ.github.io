@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>C&#43;&#43; Constructor Member Initializer List</title>
+      <link>https://Chan-JZ.github.io/posts/constructorsinitializerlists/</link>
+      <pubDate>Sun, 18 Dec 2022 02:44:34 +1030</pubDate>
+      
+      <guid>https://Chan-JZ.github.io/posts/constructorsinitializerlists/</guid>
+      <description>Constructor Member Initializer List allows us to initialize a class&amp;rsquo; data members in the constructor. There 2 main ways for us to initialize data members in a constructor.
+ Traditional way class Person { public: string pName; int age; Person() { pName = &amp;#34;Alice&amp;#34;; age = 0; } Person(string name) { pName = name; age = 0; } Person(string name, int val) { pName = name; age = val; } }; int main() { Person *s1 = new Person(); cout &amp;lt;&amp;lt; &amp;#34;pName: &amp;#34; &amp;lt;&amp;lt; s1-&amp;gt;pName &amp;lt;&amp;lt; &amp;#34;, age: &amp;#34; &amp;lt;&amp;lt; s1-&amp;gt;age &amp;lt;&amp;lt; endl; Person *s2 = new Person(&amp;#34;Bob&amp;#34;); cout &amp;lt;&amp;lt; &amp;#34;pName: &amp;#34; &amp;lt;&amp;lt; s2-&amp;gt;pName &amp;lt;&amp;lt; &amp;#34;, age: &amp;#34; &amp;lt;&amp;lt; s2-&amp;gt;age &amp;lt;&amp;lt; endl; Person *s3 = new Person(&amp;#34;Charlie&amp;#34;, 10); cout &amp;lt;&amp;lt; &amp;#34;pName: &amp;#34; &amp;lt;&amp;lt; s3-&amp;gt;pName &amp;lt;&amp;lt; &amp;#34;, age: &amp;#34; &amp;lt;&amp;lt; s3-&amp;gt;age &amp;lt;&amp;lt; endl; }  Output:</description>
+    </item>
+    
+    <item>
       <title>Hyperstyle Installation</title>
       <link>https://Chan-JZ.github.io/posts/hyperstyleinstallation/</link>
       <pubDate>Sat, 17 Dec 2022 17:24:51 +1030</pubDate>
