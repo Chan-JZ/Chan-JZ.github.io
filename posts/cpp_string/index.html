@@ -58,7 +58,7 @@ To use the std::string class mentioned above, simply include its header at the t
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          7 min read
+          8 min read
         </div>
       </div>
     </header>
@@ -358,11 +358,39 @@ s1: Helll
 s1: H
 </code></pre></div><p> 
  </p>
-<h3 id="reference">Reference</h3>
+<h2 id="string-operations">String Operations</h2>
+<h3 id="find">find()</h3>
+<p>find() will return the position of the first occurrence of the content passed as the arguments. find() takes in 2 parameters, <strong>str/c</strong> and <strong>pos</strong>. <strong>str/c</strong> means that we can search for a string or character while <strong>pos</strong> means we will only start searching from that index. If <strong>pos</strong> is not passed as an argument, its default value will be 0. The return value is of type <strong>size_t</strong>, which is an unsigned integer type. We can just think of it as an <strong>int</strong> type. If we fail to find <strong>str/c</strong>, find() will return <strong>npos</strong> which is equivalent to the largest value of <strong>size_t</strong>.</p>
+<p> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World. Goodbye, World&#34;</span>;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;World in s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1.find(<span style="color:#e6db74">&#34;World&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello in s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1.find(<span style="color:#e6db74">&#34;Hello&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> endl;
+    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Person in s1: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s1.find(<span style="color:#e6db74">&#34;Person&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> endl;
+</code></pre></div><p> 
+Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">World in s1: <span style="color:#ae81ff">7</span>
+Hello in s1: <span style="color:#ae81ff">0</span>
+Person in s1: <span style="color:#ae81ff">18446744073709551615</span>
+</code></pre></div><p> </p>
+<h3 id="substr">substr()</h3>
+<p>This function will return a new <strong>string object</strong> that has its value initialized to a copy of the substring of the original string object.
+This function takes in 2 parameters: <strong>pos</strong> and <strong>len</strong>. <strong>pos</strong> indicates the index of the first character to be copied. <strong>len</strong> indicates the length of the substring to be copied. If we don&rsquo;t pass in the <strong>len</strong> argument, substr() will return a string object that copies the original string from <strong>pos</strong> all the way to the ennd.</p>
+<p> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">    string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World. Goodbye, World&#34;</span>;
+    string s2 <span style="color:#f92672">=</span> s1.substr(<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">5</span>);
+    cout <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> endl;
+    size_t pos <span style="color:#f92672">=</span> s1.find(<span style="color:#e6db74">&#39;G&#39;</span>);
+    string s3 <span style="color:#f92672">=</span> s1.substr(pos);
+    cout <span style="color:#f92672">&lt;&lt;</span> s3 <span style="color:#f92672">&lt;&lt;</span> endl;
+</code></pre></div><p> 
+Output</p>
+<pre><code>World
+Goodbye, World
+</code></pre><h3 id="reference">Reference</h3>
 <ol>
 <li>
 <p>cplusplus 2022, <em>std::string::string</em>, cplusplus, viewed 11 December 2022,</p>
-<p><a href="https://cplusplus.com/reference/string/string/string/">https://cplusplus.com/reference/string/string/string/</a></p>
+<p><a href="https://cplusplus.com/reference/string/string/">https://cplusplus.com/reference/string/string/</a></p>
 </li>
 </ol>
 
