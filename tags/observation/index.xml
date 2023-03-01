@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Observation on My blog</title>
+    <link>https://chanjz.github.io/tags/observation/</link>
+    <description>Recent content in Observation on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Jan 2023 00:36:09 +1030</lastBuildDate><atom:link href="https://chanjz.github.io/tags/observation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Daily Thought</title>
+      <link>https://chanjz.github.io/post/daily_thought/</link>
+      <pubDate>Sun, 29 Jan 2023 00:36:09 +1030</pubDate>
+      
+      <guid>https://chanjz.github.io/post/daily_thought/</guid>
+      
+        <description>2023-02-08 I feel like I am making progress in doing LeetCode every day, keep on going!</description>
+      
+    </item>
+    
+    <item>
+      <title>Three Loops for Novice Programmers</title>
+      <link>https://chanjz.github.io/post/loop/</link>
+      <pubDate>Fri, 02 Dec 2022 12:16:53 +1030</pubDate>
+      
+      <guid>https://chanjz.github.io/post/loop/</guid>
+      
+        <description>&lt;p&gt;Do you know how these three loops work? Take your time and think about the output of them. ^ ^&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Swapping Numbers in Sorting Algorithms</title>
+      <link>https://chanjz.github.io/post/java_swapping_numbers/</link>
+      <pubDate>Tue, 22 Nov 2022 15:33:36 +1030</pubDate>
+      
+      <guid>https://chanjz.github.io/post/java_swapping_numbers/</guid>
+      
+        <description>&lt;p&gt;In this post, I will demonstrate an interesting observation about swapping numbers in sorting algorithms.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

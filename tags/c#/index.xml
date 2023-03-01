@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on My blog</title>
+    <link>https://chanjz.github.io/tags/c#/</link>
+    <description>Recent content in C# on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Nov 2022 12:36:32 +1030</lastBuildDate><atom:link href="https://chanjz.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# Class Members</title>
+      <link>https://chanjz.github.io/post/csharp_class_members/</link>
+      <pubDate>Fri, 18 Nov 2022 12:36:32 +1030</pubDate>
+      
+      <guid>https://chanjz.github.io/post/csharp_class_members/</guid>
+      
+        <description>This post will quickly go through three main class members including property, method and event.</description>
+      
+    </item>
+    
+    <item>
+      <title>C# Class and Namespace</title>
+      <link>https://chanjz.github.io/post/csharp_class_namespace/</link>
+      <pubDate>Tue, 15 Nov 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://chanjz.github.io/post/csharp_class_namespace/</guid>
+      
+        <description>&lt;p&gt;This post is the beginning of my journey for learning C#. I will start with the very first program &amp;lsquo;Hello World&amp;rsquo; to illustrate the concepts of class and namespace. And then, I will briefly talk about the reference of class libraries which consists of DDL and project reference. In the end, I will clarify the definition of a good program which should have high cohesion and low coupling.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

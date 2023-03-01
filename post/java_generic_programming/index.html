@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Java Generic Programming |
+      JZ Chan
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="JZ Chan" />
+  <meta
+    name="description"
+    content="Jian Zhe (JZ) Chan
+Student from The University of Adelaide
+Penultimate Computer Science Undergraduate
+------------- SKILLS -------------
+C&#43;&#43; | C | C# | Python 
+R | MATLAB | Visual Studio
+HTML | CSS | JavaScript | Vue.js | React.js 
+Node.js | AJAX | MySQL
+Git | Linux
+"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.ba004976221e613a16542d07a2deca5d0377ff5e6a22dec5fcec01480ba967cf.css"
+      integrity="sha256-ugBJdiIeYToWVC0Hot7KXQN3/15qIt7F/OwBSAupZ88="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
+    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://chanjz.github.io/post/java_generic_programming/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
+    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.46e991c2fcb035fc0060a792f1eb0c93ecacc9e76cd7445d6531a5cf2928686d.js"
+      integrity="sha256-RumRwvywNfwAYKeS8esMk&#43;ysyeds10RdZTGlzykoaG0="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chanjz.github.io/images/main.png"/>
+
+<meta name="twitter:title" content="Java Generic Programming"/>
+<meta name="twitter:description" content="In this post, I will introduce generic programming in Java and talk about how to define and use generic class, generic method, generic interface and generic wildcard."/>
+
+
+
+  
+  <meta property="og:title" content="Java Generic Programming" />
+<meta property="og:description" content="In this post, I will introduce generic programming in Java and talk about how to define and use generic class, generic method, generic interface and generic wildcard." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chanjz.github.io/post/java_generic_programming/" />
+<meta property="og:image" content="https://chanjz.github.io/images/main.png"/>
+<meta property="article:published_time" content="2022-11-20T14:16:22+10:30" />
+<meta property="article:modified_time" content="2022-11-20T14:16:22+10:30" /><meta property="og:site_name" content="My blog" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Java Generic Programming",
+        "headline": "Java Generic Programming",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \x3cp\x3eIn this post, I will introduce generic programming in Java and talk about how to define and use generic class, generic method, generic interface and generic wildcard.\x3c\/p\x3e
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/chanjz.github.io\/post\/java_generic_programming\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-11-20T14:16:22.00Z",
+        "datePublished": "2022-11-20T14:16:22.00Z",
+        "dateModified": "2022-11-20T14:16:22.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "JZ Chan",
+            "url": "https://chanjz.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/chanjz.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://chanjz.github.io/images/main.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/chanjz.github.io\/post\/java_generic_programming\/",
+        "wordCount" : "605",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "Java"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/main.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">My blog</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Jian Zhe (JZ) Chan<br />Student from The University of Adelaide<br />Penultimate Computer Science Undergraduate<br />------------- SKILLS -------------<br />C++ | C | C# | Python <br />R | MATLAB | Visual Studio<br />HTML | CSS | JavaScript | Vue.js | React.js <br />Node.js | AJAX | MySQL<br />Git | Linux<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:chanjianzhe2002@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/jian-zhe-chan-999b85235/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Chan-JZ"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://api.whatsapp.com/send?phone=61452633511"
+            target="_blank"
+            rel="noopener me"
+            aria-label="WhatsApp"
+            title="WhatsApp"
+          >
+            <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/awards/"
+              
+              title=""
+              >Awards</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/certifications/"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Java Generic Programming</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  20/11/2022
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+      <p>In this post, I will introduce generic programming in Java and talk about how to define and use generic class, generic method, generic interface and generic wildcard.</p>
+<p>Generic type is an unknown data type. For examples, &lsquo;E&rsquo; represents elements and &lsquo;T&rsquo; represents types. When creating the collection object, we need to specify the specific date type.</p>
+<p><br /></p>
+<h4 id="difference-between-using-and-not-using-generic-type">Difference between using and not using generic type</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// If we do not use generic type
+</span><span class="c1">// The default type will be &#39;Object&#39;, so it can store any type of data
+</span><span class="c1"></span><span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">demo01</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">ArrayList</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;abc&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">);</span>
+    <span class="n">Iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">it</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+        <span class="c1">// If we want to get the length of strings
+</span><span class="c1"></span>        <span class="c1">// ClassCastException (Dangerous)
+</span><span class="c1"></span>        <span class="c1">// String s = (String) obj;
+</span><span class="c1"></span>        <span class="c1">// System.out.println(s.length());
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// If we use generic type
+</span><span class="c1">// Error checking when compiling
+</span><span class="c1"></span><span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">demo02</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;abc&#34;</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;111&#34;</span><span class="o">);</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">it</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="define-and-use-generic-class">Define and use generic class</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Define the class
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericClass</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">E</span> <span class="n">name</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="n">E</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">E</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Use the class
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">GenericClass</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">gc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GenericClass</span><span class="o">&lt;&gt;();</span>
+        <span class="n">gc</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">100</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">gc</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="define-and-use-generic-method">Define and use generic method</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Define the method
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericMethod</span> <span class="o">{</span>
+    <span class="c1">// Member method
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">M</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="nf">method01</span><span class="o">(</span><span class="n">M</span> <span class="n">m</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">m</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Static method
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="nf">method02</span><span class="o">(</span><span class="n">S</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Use the method
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo03</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">GenericMethod</span> <span class="n">gm</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GenericMethod</span><span class="o">();</span>
+        <span class="n">gm</span><span class="o">.</span><span class="na">method01</span><span class="o">(</span><span class="n">111</span><span class="o">);</span>
+        <span class="n">gm</span><span class="o">.</span><span class="na">method01</span><span class="o">(</span><span class="s">&#34;abc&#34;</span><span class="o">);</span>
+
+        <span class="n">GenericMethod</span><span class="o">.</span><span class="na">method02</span><span class="o">(</span><span class="n">222</span><span class="o">);</span>
+        <span class="n">GenericMethod</span><span class="o">.</span><span class="na">method02</span><span class="o">(</span><span class="s">&#34;Using generic static method&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="define-and-use-generic-interface">Define and use generic interface</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Define the interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">GenericInterface</span><span class="o">&lt;</span><span class="n">I</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="n">I</span> <span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// Two ways of defining the implementing class
+</span><span class="c1">// First approach
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericInterfaceImpl1</span> <span class="kd">implements</span> <span class="n">GenericInterface</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Second approach
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericInterfaceImpl2</span><span class="o">&lt;</span><span class="n">I</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">GenericInterface</span><span class="o">&lt;</span><span class="n">I</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="n">I</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Using interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// First approach
+</span><span class="c1"></span>        <span class="n">GenericInterfaceImpl1</span> <span class="n">gi1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GenericInterfaceImpl1</span><span class="o">();</span>
+        <span class="n">gi1</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">&#34;abc&#34;</span><span class="o">);</span>
+
+        <span class="c1">// Second approach
+</span><span class="c1"></span>        <span class="n">GenericInterfaceImpl2</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">gi2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GenericInterfaceImpl2</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+        <span class="n">gi2</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="n">123</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="define-and-use-generic-wildcard">Define and use generic wildcard</h4>
+<p>When doing generic programming, if we are unsure about the type of received data, we can use the wildcard &lt;?&gt; to represent the type of data we will receive.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo05</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list01</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="n">list01</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">);</span>
+        <span class="n">list01</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">2</span><span class="o">);</span>
+
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list02</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="n">list02</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;aa&#34;</span><span class="o">);</span>
+        <span class="n">list02</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;bb&#34;</span><span class="o">);</span>
+
+        <span class="n">printArray</span><span class="o">(</span><span class="n">list01</span><span class="o">);</span>
+        <span class="n">printArray</span><span class="o">(</span><span class="n">list02</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Define a method to traverse all types of ArrayList
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printArray</span><span class="o">(</span><span class="n">ArrayList</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Iterator</span><span class="o">&lt;?&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">it</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>We cannot use &lt;?&gt; to define collections because it can only be used for receiving unknown parameters.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="n">ArrayList</span><span class="o">&lt;?&gt;</span> <span class="n">list03</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span> <span class="c1">// Incorrect code
+</span></code></pre></div><p><br /></p>
+<h4 id="advanced-operation-of-generic-wildcard">Advanced operation of generic wildcard</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo06</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Collection</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+        <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+        <span class="n">Collection</span><span class="o">&lt;</span><span class="n">Number</span><span class="o">&gt;</span> <span class="n">list3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Number</span><span class="o">&gt;();</span>
+        <span class="n">Collection</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">list4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;();</span>
+        
+        <span class="c1">// Integer extends Number extents Object
+</span><span class="c1"></span>        <span class="c1">// String extends Object
+</span><span class="c1"></span>        
+        <span class="n">getElement1</span><span class="o">(</span><span class="n">list1</span><span class="o">);</span>
+        <span class="n">getElement1</span><span class="o">(</span><span class="n">list2</span><span class="o">);</span> <span class="c1">// Wrong
+</span><span class="c1"></span>        <span class="n">getElement1</span><span class="o">(</span><span class="n">list3</span><span class="o">);</span>
+        <span class="n">getElement1</span><span class="o">(</span><span class="n">list4</span><span class="o">);</span> <span class="c1">// Wrong
+</span><span class="c1"></span>        
+        <span class="n">getElement2</span><span class="o">(</span><span class="n">list1</span><span class="o">);</span> <span class="c1">// Wrong
+</span><span class="c1"></span>        <span class="n">getElement2</span><span class="o">(</span><span class="n">list2</span><span class="o">);</span> <span class="c1">// Wrong
+</span><span class="c1"></span>        <span class="n">getElement2</span><span class="o">(</span><span class="n">list3</span><span class="o">);</span>
+        <span class="n">getElement2</span><span class="o">(</span><span class="n">list4</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// We can only receive &#39;Number&#39; or its derived class
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">getElement1</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">coll</span><span class="o">)</span> <span class="o">{}</span>
+    
+    <span class="c1">// We can only receive &#39;Number&#39; or its base class
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">getElement2</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">coll</span><span class="o">)</span> <span class="o">{}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/java/">Java</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

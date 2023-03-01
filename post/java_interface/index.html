@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Java Interface |
+      JZ Chan
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="JZ Chan" />
+  <meta
+    name="description"
+    content="Jian Zhe (JZ) Chan
+Student from The University of Adelaide
+Penultimate Computer Science Undergraduate
+------------- SKILLS -------------
+C&#43;&#43; | C | C# | Python 
+R | MATLAB | Visual Studio
+HTML | CSS | JavaScript | Vue.js | React.js 
+Node.js | AJAX | MySQL
+Git | Linux
+"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.ba004976221e613a16542d07a2deca5d0377ff5e6a22dec5fcec01480ba967cf.css"
+      integrity="sha256-ugBJdiIeYToWVC0Hot7KXQN3/15qIt7F/OwBSAupZ88="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
+    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://chanjz.github.io/post/java_interface/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
+    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.46e991c2fcb035fc0060a792f1eb0c93ecacc9e76cd7445d6531a5cf2928686d.js"
+      integrity="sha256-RumRwvywNfwAYKeS8esMk&#43;ysyeds10RdZTGlzykoaG0="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chanjz.github.io/images/main.png"/>
+
+<meta name="twitter:title" content="Java Interface"/>
+<meta name="twitter:description" content="An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types (TutorialsPoint 2022)."/>
+
+
+
+  
+  <meta property="og:title" content="Java Interface" />
+<meta property="og:description" content="An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types (TutorialsPoint 2022)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chanjz.github.io/post/java_interface/" />
+<meta property="og:image" content="https://chanjz.github.io/images/main.png"/>
+<meta property="article:published_time" content="2022-11-13T19:53:11+10:30" />
+<meta property="article:modified_time" content="2022-11-13T19:53:11+10:30" /><meta property="og:site_name" content="My blog" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Java Interface",
+        "headline": "Java Interface",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \x3cp\x3eAn interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types (TutorialsPoint 2022).\x3c\/p\x3e
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/chanjz.github.io\/post\/java_interface\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Jiajun Yu"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Jiajun Yu"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Jiajun Yu"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Jiajun Yu"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-11-13T19:53:11.00Z",
+        "datePublished": "2022-11-13T19:53:11.00Z",
+        "dateModified": "2022-11-13T19:53:11.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Jiajun Yu",
+            "url": "https://chanjz.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/chanjz.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://chanjz.github.io/images/main.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/chanjz.github.io\/post\/java_interface\/",
+        "wordCount" : "1066",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "Java"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/main.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">My blog</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Jian Zhe (JZ) Chan<br />Student from The University of Adelaide<br />Penultimate Computer Science Undergraduate<br />------------- SKILLS -------------<br />C++ | C | C# | Python <br />R | MATLAB | Visual Studio<br />HTML | CSS | JavaScript | Vue.js | React.js <br />Node.js | AJAX | MySQL<br />Git | Linux<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:chanjianzhe2002@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/jian-zhe-chan-999b85235/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Chan-JZ"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://api.whatsapp.com/send?phone=61452633511"
+            target="_blank"
+            rel="noopener me"
+            aria-label="WhatsApp"
+            title="WhatsApp"
+          >
+            <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/awards/"
+              
+              title=""
+              >Awards</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/certifications/"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Java Interface</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  13/11/2022
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">6-minute read</span>
+          </li>
+        </ul>
+      <p>An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types (TutorialsPoint 2022).</p>
+<h2 id="summary">Summary</h2>
+<p>In versions of Java 9 and above, interface can include:</p>
+<h4 id="1-member-variable-constant">1: Member Variable (Constant)</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="o">[</span><span class="kd">public</span><span class="o">]</span> <span class="o">[</span><span class="kd">static</span><span class="o">]</span> <span class="o">[</span><span class="kd">final</span><span class="o">]</span> <span class="o">(</span><span class="n">Type</span><span class="o">)</span> <span class="o">(</span><span class="n">VariableName</span><span class="o">)</span> <span class="o">=</span> <span class="o">(</span><span class="n">value</span><span class="o">);</span>
+</code></pre></div><p><strong>Properties:</strong>
+<br />
+1: Constants must be assigned by values and can not be changed in the program. <br />
+2: Use all capital letters to name variables and use underscores (_) to separate them.<br /></p>
+<h4 id="2-abstract-method">2: Abstract Method</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="o">[</span><span class="kd">public</span><span class="o">]</span> <span class="o">[</span><span class="kd">abstract</span><span class="o">]</span> <span class="o">(</span><span class="n">Type</span><span class="o">)</span> <span class="o">(</span><span class="n">MethodName</span><span class="o">)</span> <span class="o">(</span><span class="n">Parameter</span> <span class="n">List</span><span class="o">);</span>
+</code></pre></div><p><strong>Property</strong>
+<br />
+1: Implementing class must override all abstract methods of the interface unless the class is an abstract class.</p>
+<h4 id="3-default-method">3: Default Method</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="o">[</span><span class="kd">public</span><span class="o">]</span> <span class="nf">default</span> <span class="o">(</span><span class="n">Type</span><span class="o">)</span> <span class="o">(</span><span class="n">MethodName</span><span class="o">)</span> <span class="o">(</span><span class="n">Parameter</span> <span class="n">List</span><span class="o">)</span> <span class="o">{</span><span class="n">method</span><span class="o">}</span>
+</code></pre></div><p><strong>Property</strong>
+<br />
+1: Default methods can also be overridden.</p>
+<h4 id="4-static-method">4: Static Method</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="o">[</span><span class="kd">public</span><span class="o">]</span> <span class="nf">static</span> <span class="o">(</span><span class="n">Type</span><span class="o">)</span> <span class="o">(</span><span class="n">MethodName</span><span class="o">)</span> <span class="o">(</span><span class="n">Parameter</span> <span class="n">List</span><span class="o">)</span> <span class="o">{</span><span class="n">method</span><span class="o">}</span>
+</code></pre></div><p><strong>Property</strong>
+<br />
+1: Static methods should be invoked by the name of the interface rather than the Implementing object.</p>
+<h4 id="5-private-method">5: Private Method</h4>
+<p>Private Method</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">private</span> <span class="o">(</span><span class="n">Type</span><span class="o">)</span> <span class="o">(</span><span class="n">MethodName</span><span class="o">)</span> <span class="o">(</span><span class="n">Parameter</span> <span class="n">List</span><span class="o">)</span> <span class="o">{</span><span class="n">method</span><span class="o">}</span>
+</code></pre></div><p>Static Private Method</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">private</span> <span class="nf">static</span> <span class="o">(</span><span class="n">Type</span><span class="o">)</span> <span class="o">(</span><span class="n">MethodName</span><span class="o">)</span> <span class="o">(</span><span class="n">Parameter</span> <span class="n">List</span><span class="o">)</span> <span class="o">{</span><span class="n">method</span><span class="o">}</span>
+</code></pre></div><p><strong>Property</strong>
+<br />
+1: Only interface itself can invoke its own private methods.</p>
+<p><br /></p>
+<h2 id="general-properties-of-using-interfaces">General Properties of using interfaces</h2>
+<p>1: There is no static code block or constructor inside of an interface.
+<br />
+2: An implementing class can implement multiple interfaces.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyInterfaceImpl</span> <span class="kd">implements</span> <span class="n">MyInterfaceA</span><span class="o">,</span> <span class="n">MyInterfaceB</span> <span class="o">{</span>
+    <span class="c1">// override all abstract methods from MyInterfaceA and MyInterfaceB
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></div><p>3: If there are identical abstract methods in multiple interfaces implemented by the implementing class, they only need to be implemented once.
+<br />
+4: If the implementing class does not override all abstract methods of interfaces, then the implementing class must be an abstract class.
+<br />
+5: If there are identical default methods in multiple interfaces implemented by the implementing class, we must override conflicting default methods.
+<br />
+6: If there are conflicts between the method from the base class and the default method from the interface, the base class method will be invoked.
+<br />
+7: An interface can inherit multiple interfaces.
+<br />
+8: If there are identical default methods in multiple base interfaces, we must override the default method on the derived interface.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">methodDefault</span> <span class="o">(</span><span class="n">Parameter</span> <span class="n">List</span><span class="o">)</span> <span class="o">{</span><span class="n">method</span><span class="o">}</span> <span class="c1">// cannot omit &#39;default&#39; keyword
+</span></code></pre></div><p><br /></p>
+<h2 id="examples-of-using-interfaces">Examples of using interfaces</h2>
+<h4 id="1-member-variable-constant-1">1: Member Variable (Constant)</h4>
+<p>We can define member variables inside of an interface but they will be modified with &lsquo;public static final&rsquo;, therefore, those member variables are equivalent to constants.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterfaceConst</span> <span class="o">{</span>
+    <span class="c1">// We can omit &#39;public static final&#39; keywords.
+</span><span class="c1"></span>    <span class="c1">// We have to assign a value to the member variable.
+</span><span class="c1"></span>    <span class="c1">// Use all capital letters to name variables and use underscores (_) to separate them.
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">NUM_OF_VAL</span> <span class="o">=</span> <span class="n">10</span><span class="o">;</span> <span class="c1">// It is technically a constant.
+</span><span class="c1"></span><span class="o">}</span>
+
+<span class="c1">// Invoke the interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Using the name of the interface to access the member variables inside of the interface
+</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">MyInterfaceConst</span><span class="o">.</span><span class="na">NUM_OF_VAL</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="2-abstract-method-1">2: Abstract Method</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterfaceAbstract</span> <span class="o">{</span>
+    <span class="c1">// The following statements are all grammatically correct.
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">methodAbs1</span><span class="o">();</span>
+    <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">methodAbs2</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodAbs3</span><span class="o">();</span>
+    <span class="kt">void</span> <span class="nf">methodAbs4</span><span class="o">();</span>
+<span class="o">}</span>  
+
+<span class="c1">// Implementing class
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyInterfaceAbstractImpl</span> <span class="kd">implements</span> <span class="n">MyInterfaceAbstract</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodAbs1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodAbs2</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodAbs3</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodAbs4</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Using implementing class to invoke interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">MyInterfaceAbstractImpl</span> <span class="n">impl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyInterfaceAbstractImpl</span><span class="o">();</span>
+        <span class="n">impl</span><span class="o">.</span><span class="na">methodAbs1</span><span class="o">();</span>
+        <span class="n">impl</span><span class="o">.</span><span class="na">methodAbs2</span><span class="o">();</span>
+        <span class="n">impl</span><span class="o">.</span><span class="na">methodAbs3</span><span class="o">();</span>
+        <span class="n">impl</span><span class="o">.</span><span class="na">methodAbs4</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="3-default-method-1">3: Default Method</h4>
+<p>Usage: Default method is used to resolve the issue when upgrading the interface. When we want to add a new method in different interfaces that inherit from a base interface, we do not need to add it to each derived interfaces, instead we just need to define a default method in the base interface.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Base interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterfaceDefault</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">methodDefault</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// We can omit &#39;public&#39; but cannot omit &#39;default&#39; keyword.
+</span><span class="c1"></span>        <span class="c1">// Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Implementing classes
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nf">MyInterfaceDefaultImpl1</span> <span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Already contained the default method
+</span><span class="c1"></span><span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nf">MyInterfaceDefaultImpl2</span> <span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Already contained the default method
+</span><span class="c1"></span>    <span class="c1">// But can still be overridden 
+</span><span class="c1"></span>    <span class="nd">@Override</span> 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodDefault</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// New Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Using implementing class to invoke interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Even though there is no method called &#39;methodDefault&#39; in the first implementing class, but we can still invoke this method.
+</span><span class="c1"></span>        <span class="n">MyInterfaceDefaultImpl1</span> <span class="n">impl1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyInterfaceDefaultImpl1</span><span class="o">();</span>
+        <span class="n">impl1</span><span class="o">.</span><span class="na">methodDefault</span><span class="o">();</span>
+        
+        <span class="c1">// The default method has been overridden.
+</span><span class="c1"></span>        <span class="n">MyInterfaceDefaultImpl2</span> <span class="n">impl2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyInterfaceDefaultImpl2</span><span class="o">();</span>
+        <span class="n">impl2</span><span class="o">.</span><span class="na">methodDefault</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="4-static-method-1">4: Static Method</h4>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterfaceStatic</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">methodStatic</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// We can omit &#39;public&#39; but cannot omit &#39;static&#39; keyword.
+</span><span class="c1"></span>        <span class="c1">// Implementation
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Implementing class
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyInterfaceStaticImpl</span> <span class="kd">implements</span> <span class="n">MyInterfaceStatic</span> <span class="o">{</span>
+    <span class="c1">// Leave it empty
+</span><span class="c1"></span><span class="o">}</span>
+
+<span class="c1">// Using implementing class to invoke interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// MyInterfaceStaticImpl impl = new MyInterfaceStaticImpl(); 
+</span><span class="c1"></span>        <span class="c1">// impl.methodStatic();
+</span><span class="c1"></span>        <span class="c1">// Wrong way to invoke static method (We cannot use the implementing object to invoke the static method.)
+</span><span class="c1"></span>        
+        <span class="n">MyInterfaceStaticImpl</span><span class="o">.</span><span class="na">methodStatic</span><span class="o">();</span>
+        <span class="c1">// Correct way to invoke static method (by using the name of the interface)
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="5-private-method-1">5: Private Method</h4>
+<p>Private Method: Resolve the issue of duplicated code between default methods</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterfacePrivate</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">methodDefault1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Its own Implementation
+</span><span class="c1"></span>        <span class="n">methodCommon</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="k">default</span> <span class="kt">void</span> <span class="nf">methodDefault2</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Its own implementation
+</span><span class="c1"></span>        <span class="n">methodCommon</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">methodCommon</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Common implementation of methodDefault1 and methodDefault2
+</span><span class="c1"></span>        <span class="c1">// Avoid the implementing object of the interface using this private method
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><br /></p>
+<p>Static Private Method: Resolve the issue of duplicated code between static methods</p>
+<div class="highlight"><pre class="chroma"><code class="language-Java" data-lang="Java"><span class="c1">// Interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterfaceStaticPrivate</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">methodStatic1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Its own Implementation
+</span><span class="c1"></span>        <span class="n">methodStaticCommon</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">methodStatic2</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Its own implementation
+</span><span class="c1"></span>        <span class="n">methodStaticCommon</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">methodStaticCommon</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Common implementation of methodStatic1 and methodStatic2
+</span><span class="c1"></span>        <span class="c1">// Avoid this private static method being used 
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Invoke the interface
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">MyInterfaceStaticPrivate</span><span class="o">.</span><span class="na">methodStatic1</span><span class="o">();</span>
+        <span class="n">MyInterfaceStaticPrivate</span><span class="o">.</span><span class="na">methodStatic2</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h2 id="reference">Reference</h2>
+<ol>
+<li>Tutorial Points 2022, <em>Java - Interfaces</em>, Tutorial Points, viewed 13 November 2022, <a href="https://www.tutorialspoint.com/java/java_interfaces.htm#">https://www.tutorialspoint.com/java/java_interfaces.htm#</a>.
+<br /></li>
+<li>ITHeima 2019, <em>黑马最新JavaSE零基础入门到入土(idea版)</em>, online video, Bilibili, 6 February, 14 November 2022, <a href="https://www.bilibili.com/video/BV1Yb411z7PG/?p=181&amp;spm_id_from=pageDriver&amp;vd_source=b8413d3b7040957c6455a2e0ced4d206">https://www.bilibili.com/video/BV1Yb411z7PG/?p=181&amp;spm_id_from=pageDriver&amp;vd_source=b8413d3b7040957c6455a2e0ced4d206</a>.</li>
+</ol></div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/java/">Java</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
