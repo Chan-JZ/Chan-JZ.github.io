@@ -1,0 +1,11 @@
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: rgba(223, 84, 82, 1);
+}

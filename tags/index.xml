@@ -6,33 +6,11 @@
     <description>Recent content in Tags on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Mar 2023 15:27:22 +1030</lastBuildDate><atom:link href="https://chanjz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes</title>
-      <link>https://chanjz.github.io/tags/notes/</link>
-      <pubDate>Wed, 01 Mar 2023 15:27:22 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/notes/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Computer Architecture</title>
-      <link>https://chanjz.github.io/tags/computer-architecture/</link>
-      <pubDate>Mon, 27 Feb 2023 11:26:17 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/computer-architecture/</guid>
-      
-        <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Thu, 02 Mar 2023 12:23:25 +0800</lastBuildDate><atom:link href="https://chanjz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Machine Learning</title>
       <link>https://chanjz.github.io/tags/machine-learning/</link>
-      <pubDate>Fri, 24 Feb 2023 07:55:16 +1030</pubDate>
+      <pubDate>Thu, 02 Mar 2023 12:23:25 +0800</pubDate>
       
       <guid>https://chanjz.github.io/tags/machine-learning/</guid>
       
@@ -41,9 +19,31 @@
     </item>
     
     <item>
+      <title>Notes</title>
+      <link>https://chanjz.github.io/tags/notes/</link>
+      <pubDate>Thu, 02 Mar 2023 12:23:25 +0800</pubDate>
+      
+      <guid>https://chanjz.github.io/tags/notes/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data Structure and Algorithm</title>
+      <link>https://chanjz.github.io/tags/data-structure-and-algorithm/</link>
+      <pubDate>Thu, 02 Mar 2023 00:01:26 +0800</pubDate>
+      
+      <guid>https://chanjz.github.io/tags/data-structure-and-algorithm/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>C&#43;&#43;</title>
       <link>https://chanjz.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Thu, 23 Feb 2023 10:07:43 +1030</pubDate>
+      <pubDate>Wed, 01 Mar 2023 23:54:12 +0800</pubDate>
       
       <guid>https://chanjz.github.io/tags/c&#43;&#43;/</guid>
       
@@ -52,121 +52,11 @@
     </item>
     
     <item>
-      <title>Computer Networking</title>
-      <link>https://chanjz.github.io/tags/computer-networking/</link>
-      <pubDate>Thu, 23 Feb 2023 10:07:43 +1030</pubDate>
+      <title>OOP</title>
+      <link>https://chanjz.github.io/tags/oop/</link>
+      <pubDate>Wed, 01 Mar 2023 23:51:34 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/tags/computer-networking/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://chanjz.github.io/tags/linux/</link>
-      <pubDate>Thu, 23 Feb 2023 10:07:43 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/linux/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://chanjz.github.io/tags/java/</link>
-      <pubDate>Thu, 16 Feb 2023 10:08:09 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/java/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Project</title>
-      <link>https://chanjz.github.io/tags/project/</link>
-      <pubDate>Thu, 16 Feb 2023 10:08:09 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/project/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Algorithm</title>
-      <link>https://chanjz.github.io/tags/algorithm/</link>
-      <pubDate>Wed, 15 Feb 2023 10:25:39 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/algorithm/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LeetCode</title>
-      <link>https://chanjz.github.io/tags/leetcode/</link>
-      <pubDate>Wed, 15 Feb 2023 10:25:39 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/leetcode/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>https://chanjz.github.io/tags/frontend/</link>
-      <pubDate>Fri, 03 Feb 2023 00:50:29 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/frontend/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://chanjz.github.io/tags/javascript/</link>
-      <pubDate>Fri, 03 Feb 2023 00:50:29 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/javascript/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Observation</title>
-      <link>https://chanjz.github.io/tags/observation/</link>
-      <pubDate>Sun, 29 Jan 2023 00:36:09 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/observation/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>OS</title>
-      <link>https://chanjz.github.io/tags/os/</link>
-      <pubDate>Wed, 21 Dec 2022 20:34:16 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/os/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Graph</title>
-      <link>https://chanjz.github.io/tags/graph/</link>
-      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/graph/</guid>
+      <guid>https://chanjz.github.io/tags/oop/</guid>
       
         <description></description>
       
@@ -175,42 +65,9 @@
     <item>
       <title>Summer Research</title>
       <link>https://chanjz.github.io/tags/summer-research/</link>
-      <pubDate>Fri, 09 Dec 2022 14:13:16 +1030</pubDate>
+      <pubDate>Wed, 01 Mar 2023 23:37:13 +0800</pubDate>
       
       <guid>https://chanjz.github.io/tags/summer-research/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Data Structure</title>
-      <link>https://chanjz.github.io/tags/data-structure/</link>
-      <pubDate>Sat, 03 Dec 2022 14:04:26 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/data-structure/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>C#</title>
-      <link>https://chanjz.github.io/tags/c#/</link>
-      <pubDate>Fri, 18 Nov 2022 12:36:32 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/c#/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>MySQL</title>
-      <link>https://chanjz.github.io/tags/mysql/</link>
-      <pubDate>Tue, 15 Feb 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/tags/mysql/</guid>
       
         <description></description>
       

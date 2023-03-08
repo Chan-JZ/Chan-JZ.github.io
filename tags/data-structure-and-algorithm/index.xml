@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Structure and Algorithm on My blog</title>
+    <link>https://chanjz.github.io/tags/data-structure-and-algorithm/</link>
+    <description>Recent content in Data Structure and Algorithm on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Mar 2023 00:01:26 +0800</lastBuildDate><atom:link href="https://chanjz.github.io/tags/data-structure-and-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Structure and Algorithm - Linked List</title>
+      <link>https://chanjz.github.io/post/dsa_linkedlist/</link>
+      <pubDate>Thu, 02 Mar 2023 00:01:26 +0800</pubDate>
+      
+      <guid>https://chanjz.github.io/post/dsa_linkedlist/</guid>
+      
+        <description>This post will go through one of the most essential data structure - linked list.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

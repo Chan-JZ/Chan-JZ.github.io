@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        C&#43;&#43; - Pass by Reference |
+      JZ Chan
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="JZ Chan" />
+  <meta
+    name="description"
+    content="Jian Zhe (JZ) Chan
+Student from The University of Adelaide
+Penultimate Computer Science Undergraduate
+------------- SKILLS -------------
+C&#43;&#43; | C | C# | Python 
+R | MATLAB | Visual Studio
+HTML | CSS | JavaScript | Vue.js | React.js 
+Node.js | AJAX | MySQL
+Git | Linux
+"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.ba004976221e613a16542d07a2deca5d0377ff5e6a22dec5fcec01480ba967cf.css"
+      integrity="sha256-ugBJdiIeYToWVC0Hot7KXQN3/15qIt7F/OwBSAupZ88="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
+    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://chanjz.github.io/post/cpp_pass_by_reference/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
+    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.46e991c2fcb035fc0060a792f1eb0c93ecacc9e76cd7445d6531a5cf2928686d.js"
+      integrity="sha256-RumRwvywNfwAYKeS8esMk&#43;ysyeds10RdZTGlzykoaG0="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chanjz.github.io/images/main.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43; - Pass by Reference"/>
+<meta name="twitter:description" content="This post will go through the concept of pass by reference and its C&#43;&#43; implementation."/>
+
+
+
+  
+  <meta property="og:title" content="C&#43;&#43; - Pass by Reference" />
+<meta property="og:description" content="This post will go through the concept of pass by reference and its C&#43;&#43; implementation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chanjz.github.io/post/cpp_pass_by_reference/" />
+<meta property="og:image" content="https://chanjz.github.io/images/main.png"/>
+<meta property="article:published_time" content="2023-03-01T23:54:12+08:00" />
+<meta property="article:modified_time" content="2023-03-01T23:54:12+08:00" /><meta property="og:site_name" content="My blog" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "C\x2b\x2b - Pass by Reference",
+        "headline": "C\x2b\x2b - Pass by Reference",
+        "alternativeHeadline": "",
+        "description": "
+      
+        This post will go through the concept of pass by reference and its C\x2b\x2b implementation.
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/chanjz.github.io\/post\/cpp_pass_by_reference\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-03-01T23:54:12.00Z",
+        "datePublished": "2023-03-01T23:54:12.00Z",
+        "dateModified": "2023-03-01T23:54:12.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "JZ Chan",
+            "url": "https://chanjz.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/chanjz.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://chanjz.github.io/images/main.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/chanjz.github.io\/post\/cpp_pass_by_reference\/",
+        "wordCount" : "804",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "C\x2b\x2b"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/main.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">My blog</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Jian Zhe (JZ) Chan<br />Student from The University of Adelaide<br />Penultimate Computer Science Undergraduate<br />------------- SKILLS -------------<br />C++ | C | C# | Python <br />R | MATLAB | Visual Studio<br />HTML | CSS | JavaScript | Vue.js | React.js <br />Node.js | AJAX | MySQL<br />Git | Linux<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:chanjianzhe2002@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/jian-zhe-chan-999b85235/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Chan-JZ"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://api.whatsapp.com/send?phone=61452633511"
+            target="_blank"
+            rel="noopener me"
+            aria-label="WhatsApp"
+            title="WhatsApp"
+          >
+            <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/awards/"
+              
+              title=""
+              >Awards</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/certifications/"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>C&#43;&#43; - Pass by Reference</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  1/3/2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">4-minute read</span>
+          </li>
+        </ul>
+      <p>This post will go through the concept of pass by reference and its C++ implementation.</p>
+<!-- more -->
+<p>In C++, the arguments of a function can be passed by 3 methods: <strong>pass by value</strong>, <strong>pass by pointer</strong> and <strong>pass by reference</strong><br>
+<strong>callee</strong>: A function that is called by another<br>
+<strong>caller</strong>: A function that calls another function</p>
+<p> 
+ </p>
+<h2 id="pass-by-value">Pass by value</h2>
+<p>This is the method is usually used when we want to perform some calculations in a function using the value of the parameters. When we call a function that takes in a single parameter with <em>pass by value</em>, a <em>copy</em> of the <strong>caller function&rsquo;s</strong> variable is passed into the <strong>callee function</strong> as an argument, where it will become a local variable. Note that this argument is just a copy <strong>callee function&rsquo;s</strong> variable and they are <em>two independent variables</em> with the same value. This means that whatever changes that are made to the argument is not reflected to the original variable of the <strong>caller function</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Will output 5
+</span><span class="c1"></span>    <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Will still output 5
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p> 
+ </p>
+<h2 id="pass-by-reference">Pass by reference</h2>
+<p>Pass by reference is used when we want to directly modify the value of the arguments in the <strong>callee function</strong>. As its name suggest, pass by reference means passing the reference of an argument into the <strong>callee function</strong> In this case, we pass the memory address of a variable into the <strong>callee function</strong> instead of passing the actual content to it. This means that both of the the variable of the <strong>caller function</strong> and the variable that is passed to the <strong>callee function</strong> point to the same memory address. Therefore, any changes made to the local variable in the <strong>callee function</strong> will reflect to the original variable of the <strong>caller function</strong>. An alternative for <em>pass by reference</em> is <em>pass by pointer</em>.</p>
+<p> 
+ </p>
+<h3 id="pass-by-pointer">Pass by pointer</h3>
+<p>Students who are learning C or C++ will probably find this more familiar. While this is a good practice for using pointers and has its own advantages, it is more complicated to write.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Will output 5, 10
+</span><span class="c1"></span>    <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Will output 10, 5
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p> 
+ </p>
+<h3 id="pass-by-reference-1">Pass by reference</h3>
+<p>As mentioned above, we can use <em>pass by reference</em> to do what we did using <em>pass by pointer</em>. In fact, the code will be simpler as we don&rsquo;t need to explicitly pass in the reference of the variables and thus we don&rsquo;t have to dereference them in the <strong>caller function</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Will output 5, 10
+</span><span class="c1"></span>    <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Will output 10, 5
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h2 id="nbsp"> 
+ </h2>
+<p>Both of the functions shown above will have the <strong>same functionality:</strong> they swap the value of the variables <strong>a</strong> and <strong>b</strong> of the caller function. It may appear that <em>pass by pointer</em> seems redundant and more difficult to code. However, it has its own advantages.</p>
+<p> 
+ </p>
+<h2 id="comparison-of-pass-by-reference-and-pass-by-pointer">Comparison of Pass by reference and Pass by pointer</h2>
+<table>
+<thead>
+<tr>
+<th>Pass by pointer</th>
+<th>Pass by reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creates a pointer that points to the memory address of the variable  </td>
+<td>Creates an alias (another name) for the variable</td>
+</tr>
+<tr>
+<td>Need to dereference using * to get the value of the variable</td>
+<td>Can directly access and change the value of the variable</td>
+</tr>
+<tr>
+<td>Can point to NULL</td>
+<td>Must be initialized during declaration</td>
+</tr>
+<tr>
+<td>Can be reassigned to the memory address of another variable</td>
+<td>Can&rsquo;t be reassigned to any other memory address</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+    <span class="kt">int</span><span class="o">&amp;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// Must be initialized during declaration
+</span><span class="c1"></span>    <span class="n">x</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// x becomes 15
+</span><span class="c1"></span>    <span class="o">&amp;</span><span class="n">x</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// Error: Can&#39;t reassign x to another location
+</span><span class="c1"></span>    <span class="o">&amp;</span><span class="n">x</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// Error: Can&#39;t reassign x to NULL
+</span><span class="c1"></span>
+    <span class="kt">int</span><span class="o">*</span> <span class="n">y</span><span class="p">;</span> <span class="c1">// Can declare without initialization
+</span><span class="c1"></span>    <span class="n">y</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span> <span class="c1">// Can initialize after declaration
+</span><span class="c1"></span>    <span class="n">y</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span> <span class="c1">// Can reassign to another location
+</span><span class="c1"></span>    <span class="n">y</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// Can point to NULL
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p> 
+ </p>
+<h2 id="summary">Summary</h2>
+<p>As we can see, there are some subtle differences between <em>pass by pointer</em> and <em>pass by reference</em>. If we just want a function to change the content of a variable we pass in, <em>pass by reference</em> is easier to write. However, we should also use pointers when we want to enjoy the extra benefits of using a pointer (reassigning to new memory locations).</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/c&#43;&#43;/">C&#43;&#43;</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

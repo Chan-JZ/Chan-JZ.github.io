@@ -6,367 +6,81 @@
     <description>Recent content in Posts on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Mar 2023 15:27:22 +1030</lastBuildDate><atom:link href="https://chanjz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 13:24:27 +0800</lastBuildDate><atom:link href="https://chanjz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>COMP SCI 3305 - Parallel And Distributed Computing</title>
-      <link>https://chanjz.github.io/post/comp-sci-3305-parallelanddistributedcomputing/</link>
-      <pubDate>Wed, 01 Mar 2023 15:27:22 +1030</pubDate>
+      <title>COMP SCI 3305 - Parallel and Distributed Computing</title>
+      <link>https://chanjz.github.io/post/pdc/</link>
+      <pubDate>Thu, 02 Mar 2023 13:24:27 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/comp-sci-3305-parallelanddistributedcomputing/</guid>
+      <guid>https://chanjz.github.io/post/pdc/</guid>
       
-        <description>This is my notes for the course COMP SCI 3305 - Parallel And Distributed Computing.</description>
+        <description>PDC Week 1 1.1 Why we need ever-increasing performance   Climate modeling</description>
       
     </item>
     
     <item>
-      <title>ELEC ENG 3088 - Computer Architecture</title>
-      <link>https://chanjz.github.io/post/elec-eng-3088-computerarchitecture/</link>
-      <pubDate>Mon, 27 Feb 2023 11:26:17 +1030</pubDate>
+      <title>COMP SCI 3317 Using Machine Learning Tools</title>
+      <link>https://chanjz.github.io/post/uni_umlt/</link>
+      <pubDate>Thu, 02 Mar 2023 12:23:25 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/elec-eng-3088-computerarchitecture/</guid>
+      <guid>https://chanjz.github.io/post/uni_umlt/</guid>
       
-        <description>This is my notes for the course ELEC ENG 3088 - Computer Architecture.</description>
-      
-    </item>
-    
-    <item>
-      <title>COMP SCI 3317 - Using Machine Learning Tools</title>
-      <link>https://chanjz.github.io/post/comp-sci-3317-usingmltools/</link>
-      <pubDate>Fri, 24 Feb 2023 07:55:16 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/comp-sci-3317-usingmltools/</guid>
-      
-        <description>This is my notes for the course COMP SCI 3317 - Using Machine Learning Tools.</description>
+        <description>This post will go through my notes for the course COMP SCI 3317 Using Machine Learning Tools</description>
       
     </item>
     
     <item>
-      <title>Linux Project</title>
-      <link>https://chanjz.github.io/post/linuxproject/</link>
-      <pubDate>Thu, 23 Feb 2023 10:07:43 +1030</pubDate>
+      <title>Data Structure and Algorithm - Linked List</title>
+      <link>https://chanjz.github.io/post/dsa_linkedlist/</link>
+      <pubDate>Thu, 02 Mar 2023 00:01:26 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/linuxproject/</guid>
+      <guid>https://chanjz.github.io/post/dsa_linkedlist/</guid>
       
-        <description>&lt;p&gt;In this post, I will put some C++, linux, computer networking and computer architecture concepts and theories. In addition, I will also do a Linux high-concurrency web server project in the end to consolidate these knowledge.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Adelaide CS Community Project</title>
-      <link>https://chanjz.github.io/post/java_community_project/</link>
-      <pubDate>Thu, 16 Feb 2023 10:08:09 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_community_project/</guid>
-      
-        <description>&lt;p&gt;When I first knew Garbage Collection Mechanism in Java, I felt it was quite appealing to me, especially for a C++ programmer, because I do not need to worry about the memory leak anymore; therefore I started learning Java in April 2022. On December 22, 2022, I started my Java full-stack project. This post will keep track of my progress of developing this project.&lt;/p&gt;</description>
+        <description>This post will go through one of the most essential data structure - linked list.</description>
       
     </item>
     
     <item>
-      <title>Java commonly used functions</title>
-      <link>https://chanjz.github.io/post/java_functions/</link>
-      <pubDate>Wed, 15 Feb 2023 10:25:39 +1030</pubDate>
+      <title>C&#43;&#43; - Pass by Reference</title>
+      <link>https://chanjz.github.io/post/cpp_pass_by_reference/</link>
+      <pubDate>Wed, 01 Mar 2023 23:54:12 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/java_functions/</guid>
+      <guid>https://chanjz.github.io/post/cpp_pass_by_reference/</guid>
       
-        <description>&lt;p&gt;At the Summer of 2022, I converted my main programming language from C++ to Java. This is because some Java&amp;rsquo;s great features are appealing to me and Java is also widely used in software development industry. In this post, I will put some commonly used Java operations for doing leetCode.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>LeetCode Trick</title>
-      <link>https://chanjz.github.io/post/leetcode_trick/</link>
-      <pubDate>Mon, 06 Feb 2023 14:22:56 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/leetcode_trick/</guid>
-      
-        <description>&lt;p&gt;In this summer, I spend a lot of time in doing LeetCode questions to improve my problem solving and software developing skills. However, it is normal for us to forget some questions that we have done. Therefore, in this post, I will make a summary about all tricks of approaching LeetCode questions that I have found. In general, I will include some templates, observations of solving a bunch of similar LeetCode questions.&lt;/p&gt;</description>
+        <description>This post will go through the concept of pass by reference and its C++ implementation.</description>
       
     </item>
     
     <item>
-      <title>Javascript Study Notes</title>
-      <link>https://chanjz.github.io/post/javascript/</link>
-      <pubDate>Fri, 03 Feb 2023 00:50:29 +1030</pubDate>
+      <title>C&#43;&#43; - Constructor Initializer</title>
+      <link>https://chanjz.github.io/post/cpp_constructor_initializer/</link>
+      <pubDate>Wed, 01 Mar 2023 23:51:34 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/javascript/</guid>
+      <guid>https://chanjz.github.io/post/cpp_constructor_initializer/</guid>
       
-        <description>&lt;p&gt;JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. In this post, I will make some notes about my further study about JavaScript.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Daily Thought</title>
-      <link>https://chanjz.github.io/post/daily_thought/</link>
-      <pubDate>Sun, 29 Jan 2023 00:36:09 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/daily_thought/</guid>
-      
-        <description>2023-02-08 I feel like I am making progress in doing LeetCode every day, keep on going!</description>
+        <description>This post will go through the shorthand for initializing c++ class member variables.</description>
       
     </item>
     
     <item>
-      <title>C&#43;&#43; Revision</title>
-      <link>https://chanjz.github.io/post/c&#43;&#43;_revision/</link>
-      <pubDate>Tue, 24 Jan 2023 15:25:06 +1030</pubDate>
+      <title>C&#43;&#43; - string</title>
+      <link>https://chanjz.github.io/post/cpp_string/</link>
+      <pubDate>Wed, 01 Mar 2023 23:46:12 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/c&#43;&#43;_revision/</guid>
+      <guid>https://chanjz.github.io/post/cpp_string/</guid>
       
-        <description>In this post, I will quickly go through some concepts and basic STL operations of C++.</description>
-      
-    </item>
-    
-    <item>
-      <title>Adelaide Summer Research Project</title>
-      <link>https://chanjz.github.io/post/summer_research/</link>
-      <pubDate>Sun, 08 Jan 2023 23:11:55 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/summer_research/</guid>
-      
-        <description></description>
+        <description>This post will give an intorduction to c++ string and its essential functions.</description>
       
     </item>
     
     <item>
-      <title>Multithreading</title>
-      <link>https://chanjz.github.io/post/multithreading/</link>
-      <pubDate>Wed, 21 Dec 2022 20:34:16 +1030</pubDate>
+      <title>Hyperstyle Installation</title>
+      <link>https://chanjz.github.io/post/hyperstyleinstallation/</link>
+      <pubDate>Wed, 01 Mar 2023 23:37:13 +0800</pubDate>
       
-      <guid>https://chanjz.github.io/post/multithreading/</guid>
+      <guid>https://chanjz.github.io/post/hyperstyleinstallation/</guid>
       
-        <description>&lt;p&gt;In computer architecture, multithreading is the ability of a central processing unit (CPU) (or a single core in a multi-core processor) to provide multiple threads of execution concurrently, supported by the operating system. In this post, I will talk about multithreading in Java.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Exception</title>
-      <link>https://chanjz.github.io/post/java_exception/</link>
-      <pubDate>Wed, 21 Dec 2022 13:42:12 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_exception/</guid>
-      
-        <description>&lt;p&gt;Exception mechanism helps developers find issues of their programs. Its base class is java.lang.Throwable which consists of java.lang.Error and java.lang.Exception. In this post, I will talk about five keywords about Java exception, how to catch multiple exceptions and demonstrate how to define our own exception class.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Graph Algorithms</title>
-      <link>https://chanjz.github.io/post/graph/</link>
-      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://chanjz.github.io/post/graph/</guid>
-      
-        <description>Guide to graph algorithms</description>
-      
-    </item>
-    
-    <item>
-      <title>Algorithm and Data Structure Theory Study</title>
-      <link>https://chanjz.github.io/post/algorithm_theory/</link>
-      <pubDate>Mon, 12 Dec 2022 09:44:14 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/algorithm_theory/</guid>
-      
-        <description>&lt;p&gt;In this post, I will summarize some important concepts about algorithms and data structures. The contents in this post can be a bit theoretical and require some memorization.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Install Hyperstyle for checking the code quality</title>
-      <link>https://chanjz.github.io/post/install_hyperstyle/</link>
-      <pubDate>Fri, 09 Dec 2022 14:13:16 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/install_hyperstyle/</guid>
-      
-        <description>&lt;p&gt;This post is about one of the tasks of my Summer Research. For this task, we had to install Hyperstyle (a powerful code quality analyzer) from the paper &amp;lsquo;Hyperstyle: A Tool for Assessing the Code Quality of Solutions to Programming Assignments&amp;rsquo;. During the installation process, we realized that it is a bit tricky especially for Windows users. Therefore, we decided to make a documentation that includes clear, concise steps and issues that we encountered as well as how we resolved them.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Map</title>
-      <link>https://chanjz.github.io/post/java_map/</link>
-      <pubDate>Sat, 03 Dec 2022 14:04:26 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_map/</guid>
-      
-        <description>&lt;p&gt;In this post, I will introduce HashMap, LinkedHashMap and Hashtable in Java as well as their corresponding methods.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Set</title>
-      <link>https://chanjz.github.io/post/java_set/</link>
-      <pubDate>Fri, 02 Dec 2022 12:34:15 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_set/</guid>
-      
-        <description>&lt;p&gt;In this post, I will introduce HashSet and LinkedHashSet in Java as well as their corresponding methods.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Three Loops for Novice Programmers</title>
-      <link>https://chanjz.github.io/post/loop/</link>
-      <pubDate>Fri, 02 Dec 2022 12:16:53 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/loop/</guid>
-      
-        <description>&lt;p&gt;Do you know how these three loops work? Take your time and think about the output of them. ^ ^&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Swapping Numbers in Sorting Algorithms</title>
-      <link>https://chanjz.github.io/post/java_swapping_numbers/</link>
-      <pubDate>Tue, 22 Nov 2022 15:33:36 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_swapping_numbers/</guid>
-      
-        <description>&lt;p&gt;In this post, I will demonstrate an interesting observation about swapping numbers in sorting algorithms.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Generic Programming</title>
-      <link>https://chanjz.github.io/post/java_generic_programming/</link>
-      <pubDate>Sun, 20 Nov 2022 14:16:22 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_generic_programming/</guid>
-      
-        <description>&lt;p&gt;In this post, I will introduce generic programming in Java and talk about how to define and use generic class, generic method, generic interface and generic wildcard.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Iterator</title>
-      <link>https://chanjz.github.io/post/java_iterator/</link>
-      <pubDate>Sat, 19 Nov 2022 17:24:33 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_iterator/</guid>
-      
-        <description>&lt;p&gt;In this post, I will talk about Java iterator which is a powerful tool for us to traverse elements. In addition, enhanced for loop will also be introduced which can simplify the code for element traversal.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Collection</title>
-      <link>https://chanjz.github.io/post/java_collection/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_collection/</guid>
-      
-        <description>&lt;p&gt;In this post, I will talk about Java collection. Some well-known containers such as ArrayList, TreeSet are implementing classes of their respective interfaces which inherit from the collection interface. Therefore, it is a good idea to learn methods from the collection interface because all of its derived implementing classes will acquire the same methods.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Predefined Class</title>
-      <link>https://chanjz.github.io/post/java_predefined_class/</link>
-      <pubDate>Fri, 18 Nov 2022 13:59:38 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_predefined_class/</guid>
-      
-        <description>&lt;p&gt;In this post, I will talk about some predefined classes as well as commonly used APIs in Java. The post will cover object class, date class, date format class, calendar class, system class, string builder class and wrapper class. In addition, I will demonstrate some methods of those classes and show some examples.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>C# Class Members</title>
-      <link>https://chanjz.github.io/post/csharp_class_members/</link>
-      <pubDate>Fri, 18 Nov 2022 12:36:32 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/csharp_class_members/</guid>
-      
-        <description>This post will quickly go through three main class members including property, method and event.</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Inner Class</title>
-      <link>https://chanjz.github.io/post/java_innerclass/</link>
-      <pubDate>Thu, 17 Nov 2022 17:24:33 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_innerclass/</guid>
-      
-        <description>&lt;p&gt;If an object contains another object, then this means that a class includes another class. For example, the relationship between cars and engines. In this case, the engine class is called an inner class. In this post, I will explore the properties of three types of inner classes (Member Inner Class / Local Inner Class / Anonymous Inner Class).&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>&#39;Final&#39; keyword in Java</title>
-      <link>https://chanjz.github.io/post/java_final/</link>
-      <pubDate>Thu, 17 Nov 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_final/</guid>
-      
-        <description>&lt;p&gt;&amp;lsquo;Final&amp;rsquo; keyword represents &amp;lsquo;ultimate&amp;rsquo; and &amp;lsquo;unchangeable&amp;rsquo;. In this post, I will talk about four usages of the &amp;lsquo;final&amp;rsquo; keyword, including modifying a class, a method, local variables (basic and reference types) and a member variable.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Polymorphism</title>
-      <link>https://chanjz.github.io/post/java_polymorphism/</link>
-      <pubDate>Thu, 17 Nov 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_polymorphism/</guid>
-      
-        <description>&lt;p&gt;In this post, I will talk about the concepts and benefits of polymorphism. Then, I will point out some important properties about using class variables and methods when polymorphism happens. Moving on, object down casting and &amp;lsquo;instanceof&amp;rsquo; method will be briefly introduced. Finally, I will demonstrate a case study combining the knowledge of using interface and polymorphism.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>C# Class and Namespace</title>
-      <link>https://chanjz.github.io/post/csharp_class_namespace/</link>
-      <pubDate>Tue, 15 Nov 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/post/csharp_class_namespace/</guid>
-      
-        <description>&lt;p&gt;This post is the beginning of my journey for learning C#. I will start with the very first program &amp;lsquo;Hello World&amp;rsquo; to illustrate the concepts of class and namespace. And then, I will briefly talk about the reference of class libraries which consists of DDL and project reference. In the end, I will clarify the definition of a good program which should have high cohesion and low coupling.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java Interface</title>
-      <link>https://chanjz.github.io/post/java_interface/</link>
-      <pubDate>Sun, 13 Nov 2022 19:53:11 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/java_interface/</guid>
-      
-        <description>&lt;p&gt;An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types (TutorialsPoint 2022).&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Mysql Commands</title>
-      <link>https://chanjz.github.io/post/mysql_command/</link>
-      <pubDate>Tue, 15 Feb 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/post/mysql_command/</guid>
-      
-        <description>&lt;p&gt;MySQL是一种关系型数据库管理系统，其将数据保存在不同的表中，增加了速度与灵活性。MySQL所使用的SQL语言是用于访问数据库的最常用的标准化语言，由于其体积小、速度快、总体拥有成本低，一般中小型和大型网站的开发都选择MySQL作为网站数据库。此博文将会记录笔者学习MySQL的全过程，其中包括了MySQL知识的总结归纳与个人的思考启发。对于MySQL的学习，笔者决定从&lt;em&gt;bilibili&lt;/em&gt;上的&lt;a href=&#34;https://www.bilibili.com/video/BV1Kr4y1i7ru?p=1&#34;&gt;黑马程序员教学视频（MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括）&lt;/a&gt;入手（嘿嘿^^打个广告，黑马程序员yyds），该教学视频由浅入深，对于初学者及其友好。读者亦可将此博文作为MySQL速查表，以便于快速查找MySQL命令。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Smart Pointers in C&#43;&#43;</title>
-      <link>https://chanjz.github.io/post/smart_pointer/</link>
-      <pubDate>Sat, 05 Feb 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://chanjz.github.io/post/smart_pointer/</guid>
-      
-        <description>&lt;p&gt;在C++中，动态内存的管理依赖于 new 和 delete 关键字。当程序员想要在堆(heap)上为对象分配空间并返回一个指向该对象的指针时，可以使用 new 关键字进行，同时也可以利用该类的构造函数(constructor)对其进行初始化(initialization)。当动态对象不再需要被使用时，我们可以使用 delete 关键字销毁该对象，并释放与之关联的内存。使用动态内存容易造成错误，当我们忘记释放内存或者不小心丢失了指向该内存的指针时，&lt;a href=&#34;https://baike.baidu.com/item/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/6181425&#34;&gt;内存泄漏(memory leak)&lt;/a&gt;便会发生。为了更加方便地使用和管理动态内存，基于类模版的智能指针便应运而生。顾名思义，智能指针的行为类似于常规指针，但其可以智能地释放所指向的对象，避免造成内存泄漏。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Profile</title>
-      <link>https://chanjz.github.io/post/profile/</link>
-      <pubDate>Tue, 23 Nov 2021 12:32:33 +1030</pubDate>
-      
-      <guid>https://chanjz.github.io/post/profile/</guid>
-      
-        <description></description>
+        <description>Hyperstyle is a convenient and powerful tool that is built on top of various existing linters (Pylint, PMD, etc).</description>
       
     </item>
     

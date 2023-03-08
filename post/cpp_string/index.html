@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        C&#43;&#43; - string |
+      JZ Chan
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="JZ Chan" />
+  <meta
+    name="description"
+    content="Jian Zhe (JZ) Chan
+Student from The University of Adelaide
+Penultimate Computer Science Undergraduate
+------------- SKILLS -------------
+C&#43;&#43; | C | C# | Python 
+R | MATLAB | Visual Studio
+HTML | CSS | JavaScript | Vue.js | React.js 
+Node.js | AJAX | MySQL
+Git | Linux
+"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.ba004976221e613a16542d07a2deca5d0377ff5e6a22dec5fcec01480ba967cf.css"
+      integrity="sha256-ugBJdiIeYToWVC0Hot7KXQN3/15qIt7F/OwBSAupZ88="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
+    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://chanjz.github.io/post/cpp_string/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
+    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.46e991c2fcb035fc0060a792f1eb0c93ecacc9e76cd7445d6531a5cf2928686d.js"
+      integrity="sha256-RumRwvywNfwAYKeS8esMk&#43;ysyeds10RdZTGlzykoaG0="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chanjz.github.io/images/main.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43; - string"/>
+<meta name="twitter:description" content="This post will give an intorduction to c&#43;&#43; string and its essential functions."/>
+
+
+
+  
+  <meta property="og:title" content="C&#43;&#43; - string" />
+<meta property="og:description" content="This post will give an intorduction to c&#43;&#43; string and its essential functions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chanjz.github.io/post/cpp_string/" />
+<meta property="og:image" content="https://chanjz.github.io/images/main.png"/>
+<meta property="article:published_time" content="2023-03-01T23:46:12+08:00" />
+<meta property="article:modified_time" content="2023-03-01T23:46:12+08:00" /><meta property="og:site_name" content="My blog" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "C\x2b\x2b - string",
+        "headline": "C\x2b\x2b - string",
+        "alternativeHeadline": "",
+        "description": "
+      
+        This post will give an intorduction to c\x2b\x2b string and its essential functions.
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/chanjz.github.io\/post\/cpp_string\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "JZ Chan"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-03-01T23:46:12.00Z",
+        "datePublished": "2023-03-01T23:46:12.00Z",
+        "dateModified": "2023-03-01T23:46:12.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "JZ Chan",
+            "url": "https://chanjz.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/chanjz.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://chanjz.github.io/images/main.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/chanjz.github.io\/post\/cpp_string\/",
+        "wordCount" : "1729",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "C\x2b\x2b"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/main.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">My blog</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Jian Zhe (JZ) Chan<br />Student from The University of Adelaide<br />Penultimate Computer Science Undergraduate<br />------------- SKILLS -------------<br />C++ | C | C# | Python <br />R | MATLAB | Visual Studio<br />HTML | CSS | JavaScript | Vue.js | React.js <br />Node.js | AJAX | MySQL<br />Git | Linux<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:chanjianzhe2002@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/jian-zhe-chan-999b85235/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Chan-JZ"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://api.whatsapp.com/send?phone=61452633511"
+            target="_blank"
+            rel="noopener me"
+            aria-label="WhatsApp"
+            title="WhatsApp"
+          >
+            <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/awards/"
+              
+              title=""
+              >Awards</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/certifications/"
+              
+              title=""
+              >Certifications</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>C&#43;&#43; - String</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  1/3/2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">9-minute read</span>
+          </li>
+        </ul>
+      <p>This post will give an intorduction to c++ string and its essential functions.</p>
+<!-- more -->
+<p>In C++, we use the class <em>std::string</em> to store a <strong>sequence of characters</strong>, where we can perform various member functions and operators on the characters.</p>
+<p>To use the std::string class mentioned above, simply include its header at the top of your .cpp file. (Note that the third line allows us to use identifiers in the <em>std</em> namespace without using the prefix <span style="background-color: rgb(40, 40, 40);"><code>std::</code></span>)</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</code></pre></div><p>Normally, we would initialize a string variable in the following way:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;abcd&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&#34;efgh&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>However, we could take advantage of the constructor of the string class for more flexibility. Later on as we explore some common string member functions, we will also find out that we can pass arguments to them the way we pass arguments to the constructor.
+ </p>
+<h2 id="constructor">Constructor</h2>
+<h3 id="string">string()</h3>
+<p>This is the default constructor, which will construct an empty string of zero length. There are 2 ways to do this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">string</span><span class="p">();</span> 
+    <span class="n">string</span> <span class="n">s2</span><span class="p">;</span>   
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s2: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> 
+<span class="nl">s2</span><span class="p">:</span> 
+</code></pre></div><p> </p>
+<h3 id="stringconst-string-str">string(const string&amp; str)</h3>
+<p>This is the copy constructor, which will construct a copy of <strong>str</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span> 
+    <span class="n">string</span> <span class="n">s2</span> <span class="p">(</span><span class="n">s1</span><span class="p">);</span>   
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s2: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span>
+<span class="nl">s2</span><span class="p">:</span> <span class="n">Hello</span>
+</code></pre></div><p> </p>
+<h3 id="stringconst-string-str-size_t-pos-size_t-len--npos">string(const string&amp; str, size_t pos, size_t len = npos)</h3>
+<p>This is the copy constructor, which will construct a copy the portion of str that begins at the character position <strong>pos</strong> and spans <strong>len</strong> characters. If no <strong>len</strong> is provided, the substr starting from <strong>pos</strong> til the <strong>end</strong> of the string will be copied.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span> 
+    <span class="n">string</span> <span class="n">s2</span> <span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>   
+    <span class="n">string</span> <span class="n">s3</span> <span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s2: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s3: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s3</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span>
+<span class="nl">s2</span><span class="p">:</span> <span class="n">He</span>
+<span class="nl">s3</span><span class="p">:</span> <span class="n">ello</span>
+</code></pre></div><p> </p>
+<h3 id="stringsize_t-n-char-c">string(size_t n, char c)</h3>
+<p>This is the fill constructor, which will fill the string with <strong>n</strong> copies of <strong>c</strong>. You can provide an alphabetical character or the ASCII code of a character.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">);</span>   
+    <span class="n">string</span> <span class="n">s2</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">122</span><span class="p">);</span> 
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s2: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">AAAAA</span>
+<span class="nl">s2</span><span class="p">:</span> <span class="n">zzzzz</span>
+</code></pre></div><p> </p>
+<h3 id="stringiterator-first-iterator-last">string(iterator first, iterator last)</h3>
+<p>This is the range constructor, which will copy the sequence of characters in the range <strong>[first, last)</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello, World&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">8</span><span class="p">);</span> 
+    <span class="n">string</span> <span class="n">s2</span> <span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span> <span class="n">s1</span><span class="p">.</span><span class="n">rend</span><span class="p">());</span> 
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s2: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s3: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s3</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">World</span>
+<span class="nl">s2</span><span class="p">:</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">W</span>
+<span class="nl">s3</span><span class="p">:</span> <span class="n">dlroW</span> <span class="p">,</span><span class="n">olleH</span>
+</code></pre></div><p> 
+ </p>
+<h2 id="iterator-functions">Iterator Functions</h2>
+<h3 id="begin-end">begin(), end()</h3>
+<p>begin(): Returns an iterator pointing to the first character of the string.  <br>
+end(): Returns an iterator pointing to the <strong>past-the-end</strong> character of the string.<br>
+Again, it should be noted that if we pass in iterators as arguments, they will be passed in the range <strong>[first, last)</strong>. This means that the character pointed by the last iterator is <strong>not included</strong>.</p>
+<p><img src="/cpp_string/img2.png" alt="s"></p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span><span class="o">=</span><span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span><span class="o">!=</span><span class="n">s1</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">it</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span>
+</code></pre></div><p> </p>
+<h3 id="rbegin-rend">rbegin(), rend()</h3>
+<p>rbegin():</p>
+<ol>
+<li>Returns a reverse iterator pointing to the last character of the string.</li>
+<li>Reverse iterators iterate backwards: incrementing them moves them towards begin().</li>
+<li>rbegin points to the character right before end().</li>
+</ol>
+<p>rend():</p>
+<ol>
+<li>Returns a reverse iterator pointing to the <strong>theoretical element</strong> preceding the first character of the string.</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span><span class="o">=</span><span class="n">s1</span><span class="p">.</span><span class="n">rbegin</span><span class="p">();</span> <span class="n">it</span><span class="o">!=</span><span class="n">s1</span><span class="p">.</span><span class="n">rend</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">it</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">olleH</span>
+</code></pre></div><p> 
+ </p>
+<p>Now we will have a quick glance at some other commonly used string functions</p>
+<h2 id="capacity-member-functions">Capacity member functions</h2>
+<h3 id="size-length">size(), length()</h3>
+<p>Both functions are identical and return the <strong>length</strong> of the string.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.length(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.size(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">s1</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">:</span> <span class="mi">5</span>
+<span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">:</span> <span class="mi">5</span>
+</code></pre></div><p> </p>
+<h3 id="clear">clear()</h3>
+<p>Delete the contents of the string, turning it into an <strong>empty string</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span>
+<span class="nl">s1</span><span class="p">:</span> 
+</code></pre></div><p> </p>
+<h3 id="empty">empty()</h3>
+<p>Returns whether the string <strong>is empty</strong>.
+Return Value</p>
+<ol>
+<li><strong>true</strong> if string length is 0</li>
+<li><strong>false</strong> otherwise</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.empty(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s2.empty(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">:</span> <span class="mi">0</span>
+<span class="n">s2</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">:</span> <span class="mi">1</span>
+</code></pre></div><p> 
+ </p>
+<h2 id="element-access-member-functions">Element access member functions</h2>
+<h3 id="back-front">back(), front()</h3>
+<p>Returns a reference to the first/last character</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.front(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">front</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">front</span><span class="p">()</span> <span class="o">=</span> <span class="sc">&#39;h&#39;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.front(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">front</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.back(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">=</span> <span class="sc">&#39;O&#39;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1.back(): &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">s1</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="o">:</span> <span class="n">H</span>
+<span class="n">s1</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="o">:</span> <span class="n">h</span>
+<span class="n">s1</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">:</span> <span class="n">o</span>
+<span class="n">s1</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">:</span> <span class="n">O</span>
+</code></pre></div><p> 
+ </p>
+<h2 id="modifier-member-functions">Modifier member functions</h2>
+<h3 id="-operator">+ operator</h3>
+<p>Append a string to the end of another.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&#34;, &#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="s">&#34;World.&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s4</span> <span class="o">=</span> <span class="s">&#34;Hi. &#34;</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span> <span class="o">+=</span> <span class="n">s2</span><span class="p">;</span>
+    <span class="n">s1</span> <span class="o">+=</span> <span class="n">s3</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">s4</span> <span class="o">+</span> <span class="n">s1</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="p">.</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">Hi</span><span class="p">.</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="p">.</span>
+</code></pre></div><p> </p>
+<h3 id="append">append()</h3>
+<p>Similar to &lsquo;+&rsquo; operator, append() appends characters to the end of a string. However, similar to the constructor, we can pass in various type of argument as the parameters.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&#34;, &#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="s">&#34;World.&#34;</span><span class="p">;</span>
+
+    <span class="n">s1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">s3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">// 0 = starting position of s3 to append, 5 = length of string to append
+</span><span class="c1"></span>    <span class="n">s1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="sc">&#39;.&#39;</span><span class="p">);</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> 
+    <span class="n">s1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">5</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="p">.....</span> <span class="n">ello</span>
+</code></pre></div><p> </p>
+<h3 id="insert">insert()</h3>
+<p>The insert() function has the same functionality as the append() function but we can choose insert to anywhere in the string. There are 2 different ways we can do this. Say we are trying to insert <strong>str</strong> to a string <em>s</em>.</p>
+<ol>
+<li>s.insert(<strong>startingPosition</strong>, <strong>str</strong>, <strong>startingPosOfStr</strong>, <strong>lengthOfSubstr</strong>). <strong>startingPosition</strong> indicates the insertion point of the new contents to <strong>s</strong>, which will be inserted before the character at <strong>startingPosition</strong>. <strong>startingPosOfStr</strong> indicates the position of the first character in <strong>str</strong> to be inserted to <strong>s</strong>. <strong>lengthOfSubstr</strong> indicates the length of the substring to be inserted to <strong>s</strong>, starting from index <strong>startingPosOfStr</strong>. If the last 2 parameters are no provided, the entire <strong>str</strong> will be inserted to <strong>startingPosition</strong>;.</li>
+<li>s.insert(<strong>startingPosition</strong>, <strong>beginningIterator</strong>, <strong>endIterator</strong>). This will insert the  if <strong>str</strong> in the range <strong>[beginningIterator, endIterator)</strong></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;abef&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&#34;cd&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="s">&#34;zghijz&#34;</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">s2</span><span class="p">);</span> <span class="c1">// 2 = we insert s2 at index 2 of s1
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// The substr that we are inserting will start from index 1 and has length 4
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">s3</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">s3</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// .end() = we insert at the end of s1
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">abef</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">abcdef</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">abcdeghijf</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">abcdeghijfz</span>
+</code></pre></div><p> </p>
+<h3 id="erase">erase()</h3>
+<p>Erase a part of the string or even the entire string. Similar to insert(), there are 2 ways we can do this. Say we are trying to delete from the string <strong>s</strong>:</p>
+<ol>
+<li>s.erase(<strong>startingPos = 0</strong>, <strong>length</strong>). This will erase the portion of the string starting at <strong>startingPos</strong> and spans <strong>length</strong>.</li>
+<li>s.erase(<strong>beginningIterator</strong>, <strong>endIterator</strong>). This will erase the portion of the string in the range <strong>[beginningIterator, endIterator)</strong></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello, World&#34;</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// 5 = starting position of s1 to erase, 2 = length of string to erase
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+    <span class="n">s1</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// Removes the character pointed by the iterator s1.begin()+5
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+    <span class="n">s1</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">s1</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">8</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">World</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">HelloWorld</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">Helloorld</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">Hd</span>
+</code></pre></div><p> </p>
+<h3 id="push_back-pop_back">push_back(), pop_back()</h3>
+<p>Append/remove a character from the end of a string.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;H&#34;</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">&#39;l&#39;</span><span class="p">);</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">&#39;l&#39;</span><span class="p">);</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">&#39;l&#39;</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="n">s1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="nl">s1</span><span class="p">:</span> <span class="n">H</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">Helll</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="n">H</span>
+</code></pre></div><p> 
+ </p>
+<h2 id="string-operations">String Operations</h2>
+<h3 id="find">find()</h3>
+<p>find() will return the position of the first occurrence of the content passed as the arguments. find() takes in 2 parameters, <strong>str/c</strong> and <strong>pos</strong>. <strong>str/c</strong> means that we can search for a string or character while <strong>pos</strong> means we will only start searching from that index. If <strong>pos</strong> is not passed as an argument, its default value will be 0. The return value is of type <strong>size_t</strong>, which is an unsigned integer type. We can just think of it as an <strong>int</strong> type. If we fail to find <strong>str/c</strong>, find() will return <strong>npos</strong> which is equivalent to the largest value of <strong>size_t</strong>.</p>
+<p> </p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello, World. Goodbye, World&#34;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;World in s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#34;World&#34;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// &#34;World&#34; first appeared at index 7
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Hello in s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Person in s1: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#34;Person&#34;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">World</span> <span class="n">in</span> <span class="nl">s1</span><span class="p">:</span> <span class="mi">7</span>
+<span class="n">Hello</span> <span class="n">in</span> <span class="nl">s1</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Person</span> <span class="n">in</span> <span class="nl">s1</span><span class="p">:</span> <span class="mi">18446744073709551615</span>
+</code></pre></div><p> </p>
+<h3 id="substr">substr()</h3>
+<p>This function will return a new <strong>string object</strong> that has its value initialized to a copy of the substring of the original string object.
+This function takes in 2 parameters: <strong>pos</strong> and <strong>len</strong>. <strong>pos</strong> indicates the index of the first character to be copied. <strong>len</strong> indicates the length of the substring to be copied. If we don&rsquo;t pass in the <strong>len</strong> argument, substr() will return a string object that copies the original string from <strong>pos</strong> all the way to the ennd.</p>
+<p> </p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;Hello, World. Goodbye, World&#34;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">size_t</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">s1</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="sc">&#39;G&#39;</span><span class="p">);</span>
+    <span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">s1</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span> <span class="c1">// Creates a substring that starts from &#39;G&#39; in s1
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s3</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p> 
+Output</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">World</span>
+<span class="n">Goodbye</span><span class="p">,</span> <span class="n">World</span>
+</code></pre></div><h3 id="reference">Reference</h3>
+<ol>
+<li>
+<p>cplusplus 2022, <em>std::string::string</em>, cplusplus, viewed 11 December 2022,</p>
+<p><a href="https://cplusplus.com/reference/string/string/">https://cplusplus.com/reference/string/string/</a></p>
+</li>
+</ol>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/c&#43;&#43;/">C&#43;&#43;</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        JZ Chan
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
